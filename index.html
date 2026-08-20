@@ -1,774 +1,831 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-	<title>Archi - Free Architecture Portfolio HTML Template</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="author" content="TemplatesJungle">
-	<meta name="keywords" content="Free HTML Template">
-	<meta name="description" content="Free HTML Template">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Barkwood Design. Architecture, interior design, residential, hospitality, planning, landscape, visualization, execution and construction services.">
+<meta name="color-scheme" content="dark light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Barkwood Design">
+<meta property="og:title" content="Barkwood Design | Architecture, Interior & Built Environment">
+<meta property="og:description" content="Barkwood Design. Architecture, interior design, residential, hospitality, planning, landscape, visualization, execution and construction services.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Barkwood Design | Architecture, Interior & Built Environment">
+<meta name="twitter:description" content="Architecture, interior design, planning, landscape, visualization, documentation, execution and construction support.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Barkwood Design",
+  "description": "Architecture, interior design, urban planning, landscape, visualization, documentation, execution and construction support.",
+  "email": "info@barkwooddesign.com",
+  "telephone": "+92 42 36620206",
+  "address": [
+    {"@type":"PostalAddress","streetAddress":"Office 103 Floor M1 Eden Tower Main Boulevard Gulberg III","addressLocality":"Lahore","postalCode":"54000","addressCountry":"PK"},
+    {"@type":"PostalAddress","streetAddress":"76 Commercial Cavalry Ground Lahore Cantt","addressLocality":"Lahore","addressCountry":"PK"}
+  ],
+  "sameAs": [
+    "https://www.facebook.com/barkwooddesign",
+    "https://www.instagram.com/barkwooddesign",
+    "https://www.pinterest.com/barkwooddesign"
+  ]
+}
+</script>
+<title>Barkwood Design | Architecture, Interior & Built Environment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070707;--bg2:#0d0e0f;--surface:#111314;--surface2:#17191a;--text:#f4f2ec;
+  --muted:#b6b7b4;--soft:#888d89;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.18);
+  --accent:#c6a468;--accent2:#ead19e;--accent-soft:rgba(198,164,104,.12);--header:rgba(7,7,7,.68);--glass:rgba(17,19,20,.68);--glass-strong:rgba(17,19,20,.86);
+  --shadow:0 30px 90px rgba(0,0,0,.34);--shadow-soft:0 16px 40px rgba(0,0,0,.22);
+  --ease:cubic-bezier(.16,1,.3,1);--gutter:clamp(18px,4vw,70px);--max:1480px;
+  --hero-offset:104px;
+}
+html[data-theme="light"]{
+  /* Clean neutral white inspired by premium product websites */
+  --bg:#ffffff;--bg2:#f7f7f7;--surface:#ffffff;--surface2:#f4f4f4;--text:#111111;
+  --muted:#555555;--soft:#767676;--line:rgba(0,0,0,.075);--line2:rgba(0,0,0,.13);
+  --accent:#866239;--accent2:#a87843;--accent-soft:rgba(134,98,57,.085);--header:rgba(255,255,255,.88);--glass:rgba(255,255,255,.76);--glass-strong:rgba(255,255,255,.94);
+  --shadow:0 30px 80px rgba(0,0,0,.07);--shadow-soft:0 14px 36px rgba(0,0,0,.045);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;overflow-x:hidden;transition:background .55s ease,color .55s ease;-webkit-font-smoothing:antialiased}
+html[data-theme="light"] body{background-image:none}
+html[data-theme="light"] .archive,html[data-theme="light"] .team{background-image:none}
+body.menu-open,body.modal-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+::selection{background:var(--accent);color:#111}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--soft)}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
 
-	<link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		rel="stylesheet">
+/* shared */
+.progress{position:fixed;left:0;top:0;width:100%;height:2px;z-index:5000}.progress span{display:block;width:0;height:100%;background:var(--accent);box-shadow:0 0 14px rgba(198,164,104,.4)}
+.section{width:min(100%,var(--max));margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.section-pad{padding-top:clamp(86px,9vw,132px);padding-bottom:clamp(86px,9vw,132px)}
+.eyebrow{display:block;color:var(--accent);font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:13px}
+.section-title{font-size:clamp(40px,5vw,72px);font-weight:300;line-height:.95;letter-spacing:-.052em}
+.section-copy{max-width:530px;font-size:13px;line-height:1.85;color:var(--muted)}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:45px;border-bottom:1px solid var(--line);padding-bottom:27px;margin-bottom:50px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.mono{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--soft)}
+.text-link{display:inline-flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line2);font-size:9px;letter-spacing:2px;text-transform:uppercase;transition:color .3s ease,border-color .3s ease,transform .4s var(--ease)}
+.text-link:hover{color:var(--accent);border-color:var(--accent);transform:translateX(4px)}
+
+/* header */
+header{position:fixed;left:0;top:0;width:100%;z-index:4000;padding:14px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:26px;border-bottom:1px solid transparent;background:transparent;transition:padding .45s var(--ease),background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
+header.scrolled{padding:8px var(--gutter);background:var(--header);border-color:var(--line);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.brand{display:flex;align-items:center;gap:16px;min-width:0}.logo-wrap{position:relative;width:142px;height:86px;flex:none}.logo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .3s ease,transform .5s var(--ease)}
+.logo-dark{opacity:1}.logo-light{opacity:0}html[data-theme="light"] .logo-dark{opacity:0}html[data-theme="light"] .logo-light{opacity:1}.logo-wrap:hover img{transform:scale(1.035)}
+.brand-caption{display:block;color:var(--muted);font-size:8px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+nav ul{display:flex;align-items:center;gap:clamp(16px,2vw,34px);list-style:none}nav a,.nav-trigger{position:relative;border:0;background:transparent;padding:8px 0;font-size:9px;letter-spacing:2px;text-transform:uppercase;opacity:.76;transition:opacity .25s ease,color .25s ease}
+nav a::after,.nav-trigger::after{content:"";position:absolute;left:0;bottom:1px;width:0;height:1px;background:var(--accent);transition:width .45s var(--ease)}
+nav a:hover,nav a.active,.nav-trigger:hover{opacity:1;color:var(--text)}nav a:hover::after,nav a.active::after,.nav-item:hover .nav-trigger::after{width:100%}
+.nav-item{position:static}.chevron{font-size:8px;margin-left:5px}.mega-menu{position:absolute;left:50%;top:calc(100% - 1px);width:min(930px,calc(100vw - 40px));transform:translate(-50%,-10px);padding:28px;background:color-mix(in srgb,var(--surface) 94%,transparent);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(24px);display:grid;grid-template-columns:1.08fr 1fr 1fr;gap:28px;opacity:0;visibility:hidden;transition:opacity .25s ease,transform .35s var(--ease),visibility .25s ease}
+.nav-item:hover .mega-menu,.nav-item:focus-within .mega-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.mega-intro b{display:block;font-size:21px;font-weight:300;line-height:1.05;margin-bottom:12px}.mega-intro p{font-size:11px;line-height:1.7;color:var(--muted);max-width:310px}.mega-intro .text-link{margin-top:20px}
+.mega-col h4{font-size:8px;letter-spacing:2.3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}.mega-col a{display:flex;justify-content:space-between;gap:14px;padding:8px 0;color:var(--muted);font-size:11px;border-bottom:1px solid transparent;transition:color .25s ease,padding-left .3s var(--ease)}.mega-col a:hover{color:var(--text);padding-left:5px}.mega-col a span{color:var(--soft);font-size:9px}
+.header-right{display:flex;align-items:center;gap:9px;flex:none}.theme-toggle{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);background:var(--surface);padding:8px 11px;font-size:8px;letter-spacing:1.7px;text-transform:uppercase;box-shadow:var(--shadow-soft);transition:transform .3s var(--ease),border-color .3s ease,background .3s ease}.theme-toggle:hover{transform:translateY(-2px);border-color:var(--accent)}.theme-icon{font-size:11px}
+.mobile-toggle{display:none;width:41px;height:41px;border:1px solid var(--line2);background:var(--surface);position:relative}.mobile-toggle span,.mobile-toggle span::before,.mobile-toggle span::after{display:block;position:absolute;left:50%;top:50%;width:16px;height:1px;background:var(--text);transform:translate(-50%,-50%);transition:transform .3s ease,opacity .2s ease}.mobile-toggle span::before,.mobile-toggle span::after{content:"";left:0;top:0}.mobile-toggle span::before{transform:translateY(-5px)}.mobile-toggle span::after{transform:translateY(5px)}.mobile-toggle.open span{background:transparent}.mobile-toggle.open span::before{opacity:1;transform:translate(-50%,-50%) rotate(45deg)}.mobile-toggle.open span::after{opacity:1;transform:translate(-50%,-50%) rotate(-45deg)}
+
+/* hero */
+.hero-shell{position:relative;background:var(--bg);isolation:isolate}
+/* Dark theme: cinematic atmospheric blend into the next section. */
+.hero-shell::after{content:"";position:absolute;z-index:4;left:0;right:0;bottom:-1px;height:clamp(38px,4vw,64px);pointer-events:none;background:linear-gradient(180deg,transparent 0%,color-mix(in srgb,var(--bg) 10%,transparent) 52%,color-mix(in srgb,var(--bg) 58%,transparent) 84%,var(--bg) 100%);box-shadow:none}
+/* Light theme: no fade. The next section rises slightly over the hero like a soft editorial sheet. */
+html[data-theme="light"] .hero-shell::after{display:none}
+html[data-theme="light"] .projects{z-index:6;margin-top:-22px;border-radius:24px 24px 0 0;background:var(--bg);box-shadow:0 -10px 34px rgba(18,18,18,.055);overflow:hidden}
+html[data-theme="light"] .projects::after{content:"";position:absolute;left:7%;right:7%;top:0;height:1px;background:rgba(0,0,0,.055);pointer-events:none}
+@media (max-width:900px){html[data-theme="light"] .projects{margin-top:-14px;border-radius:18px 18px 0 0;box-shadow:0 -8px 24px rgba(18,18,18,.05)}}
+.hero{--hero-copy-opacity:1;--hero-shift:0px;--hero-media-scale:1.025;--hero-media-opacity:1;position:relative;height:min(94svh,940px);min-height:620px;overflow:hidden;background:#050505}
+.hero-media{position:absolute;inset:0;overflow:hidden;z-index:0;opacity:var(--hero-media-opacity);transition:opacity .25s linear}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.14)),linear-gradient(0deg,rgba(0,0,0,.76),transparent 54%);z-index:3;pointer-events:none}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.90) saturate(.93);transform:scale(var(--hero-media-scale));opacity:0;z-index:1;will-change:opacity,transform;transition:opacity 1.25s cubic-bezier(.22,.61,.36,1),transform 7s cubic-bezier(.16,1,.3,1),filter .8s ease}
+.hero-media img.active{opacity:1;z-index:2}
+.hero-slide-indicator{position:absolute;z-index:7;left:50%;bottom:31px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:1px;padding:4px 7px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(0,0,0,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hero-slide-dot{position:relative;width:30px;height:30px;min-width:30px;border:0;border-radius:50%;padding:0;background:transparent;cursor:pointer}
+.hero-slide-dot::before{content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.48);box-shadow:0 0 0 1px rgba(255,255,255,.08);transition:transform .45s cubic-bezier(.22,1,.36,1),background .45s ease,box-shadow .45s ease}
+.hero-slide-dot:hover::before{transform:translate(-50%,-50%) scale(1.35);background:rgba(255,255,255,.82)}
+.hero-slide-dot.active::before{transform:translate(-50%,-50%) scale(1.45);background:var(--accent);box-shadow:0 0 0 2px rgba(198,164,104,.18),0 0 12px rgba(198,164,104,.28)}
+.hero-slide-label{display:none}
+.hero-slide-caption{position:absolute;z-index:5;left:var(--gutter);top:clamp(108px,14vh,150px);font-size:8px;letter-spacing:2.2px;text-transform:uppercase;color:rgba(255,255,255,.72);opacity:.9}
+.hero-content{position:absolute;z-index:5;left:var(--gutter);right:var(--gutter);bottom:clamp(108px,12vh,152px);display:flex;align-items:flex-end;justify-content:space-between;gap:45px;opacity:var(--hero-copy-opacity);transform:translateY(var(--hero-shift));will-change:opacity,transform;transition:opacity .16s linear,transform .16s linear}
+.hero-content.hero-copy-fading{opacity:.18;transform:translateY(5px);transition:opacity .42s ease,transform .42s ease}
+.hero-copy{max-width:850px}.hero h1{font-size:clamp(56px,7.3vw,120px);font-weight:300;line-height:.88;letter-spacing:-.065em;text-wrap:balance;text-shadow:0 10px 30px rgba(0,0,0,.12)}
+.hero-sub{margin-top:22px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.55)}.hero-note{max-width:290px;font-size:11px;line-height:1.8;color:rgba(255,255,255,.82);text-shadow:0 4px 20px rgba(0,0,0,.45)}
+.hero[data-tone="light"] .hero-copy,.hero[data-tone="light"] .hero-note{color:#111}.hero[data-tone="light"] .hero-sub{color:#222;text-shadow:none}.hero[data-tone="light"] .hero-media::after{background:linear-gradient(90deg,rgba(255,255,255,.56),rgba(255,255,255,.15) 55%,rgba(255,255,255,.05)),linear-gradient(0deg,rgba(255,255,255,.32),transparent 54%)}
+.hero-bottom{position:absolute;z-index:6;left:var(--gutter);right:var(--gutter);bottom:28px;display:flex;justify-content:space-between;align-items:flex-end;color:rgba(255,255,255,.76);font-size:8px;letter-spacing:2.2px;text-transform:uppercase;opacity:var(--hero-copy-opacity);transition:opacity .18s linear}.hero-scroll{display:flex;align-items:flex-end;gap:11px}.hero-scroll i{width:1px;height:42px;background:currentColor;opacity:.5;position:relative;flex:none}.hero-scroll i::after{content:"";position:absolute;left:50%;bottom:-2px;width:5px;height:5px;border-radius:50%;background:var(--accent);transform:translateX(-50%)}
+.hero-meta{font-size:8px;letter-spacing:2px}.hero-meta b{font-weight:500;color:currentColor}
+
+/* projects */
+.projects{padding-top:clamp(82px,9vw,132px);padding-bottom:clamp(88px,9vw,132px);background:var(--bg);position:relative;isolation:isolate}.projects::before,.services::before,.team::before,.blog-section::before,.news-section::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 20% 12%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 32%),radial-gradient(circle at 84% 70%,color-mix(in srgb,var(--accent) 4%,transparent),transparent 30%)}
+.project-filter-wrap{margin-top:-18px;margin-bottom:45px;position:relative}.rail-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--soft);font-size:8px;letter-spacing:2px;text-transform:uppercase}.rail-label i{font-style:normal;color:var(--accent)}.project-filter{display:flex;gap:8px;overflow:auto;scrollbar-width:none;cursor:grab;padding:1px 0 8px}.project-filter::-webkit-scrollbar{display:none}.project-filter.dragging{cursor:grabbing;scroll-behavior:auto}.filter-btn{flex:0 0 auto;border:1px solid var(--line);background:transparent;padding:9px 12px;font-size:8px;letter-spacing:1.6px;text-transform:uppercase;transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s var(--ease)}.filter-btn:hover,.filter-btn.active{border-color:var(--accent);background:var(--accent-soft);color:var(--text)}.filter-btn:hover{transform:translateY(-2px)}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,2.9vw,48px)}.project-card{position:relative;display:block;overflow:hidden;min-height:620px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-soft);isolation:isolate}.project-card:nth-child(2){margin-top:90px}.project-media{position:absolute;inset:0}.project-media img{width:100%;height:100%;object-fit:cover;filter:brightness(.87) saturate(.92);transform:scale(1.01);transition:transform 1.3s var(--ease),filter .9s ease}.project-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),transparent 45%,rgba(0,0,0,.90) 100%);transition:opacity .5s ease}.project-card:hover .project-media img{transform:scale(1.055);filter:brightness(.96) saturate(1)}.project-info{position:absolute;z-index:2;left:clamp(22px,2.8vw,45px);right:clamp(22px,2.8vw,45px);bottom:clamp(24px,2.7vw,42px);display:flex;justify-content:space-between;align-items:flex-end;gap:20px;color:#fff}.project-kicker{display:block;color:#e6c98d;font-size:9px;letter-spacing:2.3px;text-transform:uppercase;margin-bottom:9px}.project-info h3{font-size:clamp(27px,3vw,45px);font-weight:300;line-height:.96;letter-spacing:-.04em;text-shadow:0 4px 20px rgba(0,0,0,.35)}.project-info p{margin-top:9px;color:rgba(255,255,255,.72);font-size:9px;letter-spacing:1.7px;text-transform:uppercase}.project-arrow{width:40px;height:40px;border:1px solid rgba(255,255,255,.42);border-radius:50%;display:grid;place-items:center;font-size:15px;transition:background .35s ease,color .35s ease,transform .5s var(--ease);flex:none}.project-card:hover .project-arrow{background:#fff;color:#111;transform:rotate(45deg)}
+.card-empty{display:flex;align-items:flex-end;padding:45px}.card-empty>div{max-width:500px}.card-empty strong{display:block;font-size:27px;font-weight:300}.card-empty span{display:block;margin-top:12px;color:var(--muted);font-size:12px;line-height:1.8}
+
+/* archive */
+.archive{background:var(--bg2);padding:92px 0 115px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.archive-grid{display:grid;grid-template-columns:.85fr 1.45fr;gap:65px}.archive-intro{position:sticky;top:115px;align-self:start}.archive-intro p{max-width:430px;color:var(--muted);font-size:12px;line-height:1.85;margin-top:22px}.archive-list{border-top:1px solid var(--line)}.archive-row{display:grid;grid-template-columns:52px 1fr auto auto;gap:20px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease),color .25s ease}.archive-row:hover{padding-left:8px;padding-right:8px;background:linear-gradient(90deg,transparent,var(--accent-soft),transparent)}.archive-no{font-size:8px;letter-spacing:2px;color:var(--soft)}.archive-name{font-size:clamp(20px,2vw,30px);font-weight:300}.archive-note{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}.archive-arrow{font-size:16px;color:var(--accent)}
+
+/* strengths */
+.strengths{padding-top:clamp(90px,9vw,132px);padding-bottom:clamp(90px,9vw,132px)}.strength-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:22px}.strength-card{position:relative;display:block;min-height:570px;overflow:hidden;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-soft)}.strength-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.70) saturate(.9);transition:transform 1.15s var(--ease),filter .8s ease}.strength-card:hover img{transform:scale(1.05);filter:brightness(.82) saturate(1)}.strength-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),transparent 38%,rgba(0,0,0,.84))}.strength-info{position:absolute;z-index:2;left:30px;right:30px;bottom:30px;color:#fff}.strength-info span{font-size:9px;letter-spacing:2.1px;text-transform:uppercase;color:#e5c789}.strength-info h3{font-size:clamp(40px,5vw,72px);font-weight:300;letter-spacing:-.05em;line-height:.9;margin-top:8px}.strength-info p{margin-top:11px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.72)}.strength-card>b{position:absolute;right:25px;bottom:25px;z-index:2;width:42px;height:42px;border:1px solid rgba(255,255,255,.42);border-radius:50%;display:grid;place-items:center;font-weight:400;transition:background .3s ease,color .3s ease,transform .4s var(--ease)}.strength-card:hover>b{background:#fff;color:#111;transform:rotate(45deg)}.strength-hospitality{background:linear-gradient(155deg,#171718,#090a0a 70%);color:#fff;overflow:hidden}.strength-hospitality::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 20%,rgba(198,164,104,.18),transparent 28%),linear-gradient(135deg,rgba(255,255,255,.06),transparent 38%)}.hospitality-mark{position:absolute;top:42px;left:42px;width:160px;height:160px;border:1px solid rgba(255,255,255,.14);border-radius:50%;display:grid;place-items:center;box-shadow:0 0 80px rgba(198,164,104,.11)}.hospitality-mark span{font-family:Georgia,serif;font-size:92px;font-weight:300;line-height:1;color:rgba(255,255,255,.08)}.hospitality-mark small{position:absolute;bottom:24px;font-size:7px;letter-spacing:2px;color:var(--accent)}.strength-hospitality .strength-info{color:#fff}
+
+/* services */
+.services{position:relative;padding-top:clamp(90px,9vw,132px);padding-bottom:clamp(90px,9vw,132px)}.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}.service{position:relative;min-height:400px;padding:0 26px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(150deg,color-mix(in srgb,var(--surface) 94%,transparent),transparent 70%);overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}.service::after{content:"";position:absolute;inset:auto 0 0 0;height:0;background:linear-gradient(180deg,transparent,var(--accent-soft));transition:height .55s var(--ease);pointer-events:none}.service:hover::after{height:35%}.service-thumb{height:190px;margin:0 -26px 27px;overflow:hidden;background:var(--surface2);position:relative}.service-thumb img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) brightness(.82);transition:transform 1.1s var(--ease),filter .6s ease}.service:hover .service-thumb img{transform:scale(1.06);filter:saturate(.98) brightness(.93)}.service-no{font-size:8px;letter-spacing:2px;color:var(--soft)}.service-label{position:absolute;right:26px;top:209px;color:var(--accent);font-size:8px;letter-spacing:2px;text-transform:uppercase}.service h3{font-size:clamp(25px,2.4vw,37px);font-weight:300;line-height:.98;letter-spacing:-.035em;margin-top:18px;position:relative;z-index:2}.service p{position:relative;z-index:2;margin-top:14px;color:var(--muted);font-size:11px;line-height:1.75;max-width:430px}
+
+/* education */
+.education{display:grid;grid-template-columns:1fr 1.25fr;gap:60px;padding:85px 0 10px;border-top:1px solid var(--line);margin-top:70px}.education h3{font-size:clamp(38px,4.8vw,68px);font-weight:300;line-height:.95;letter-spacing:-.052em}.education-body p{max-width:680px;color:var(--muted);font-size:13px;line-height:1.85}.course-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}.course-tags span{padding:8px 10px;border:1px solid var(--line);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);background:color-mix(in srgb,var(--surface) 75%,transparent)}.education-world{display:flex;flex-direction:column;gap:7px;padding:18px 0;margin-top:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.education-world strong{color:var(--accent);font-size:8px;letter-spacing:2.3px}.education-world span{font-size:11px;color:var(--muted)}
+
+/* team */
+.team{position:relative;padding:clamp(90px,10vw,140px) 0;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.team-grid{display:grid;grid-template-columns:1.12fr 1.4fr;gap:60px;align-items:start}.principal-card{position:relative;min-height:600px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}.principal-photo{position:absolute;inset:0 0 28% 0;background:radial-gradient(circle at 45% 32%,rgba(198,164,104,.22),transparent 20%),linear-gradient(135deg,#1f2324,#0b0d0d 65%,#171313);display:grid;place-items:center}.principal-photo::before{content:"PA";font-size:120px;font-weight:300;letter-spacing:-.08em;color:rgba(255,255,255,.075)}.principal-placeholder{position:absolute;left:24px;top:24px;padding:7px 9px;border:1px solid rgba(255,255,255,.16);font-size:7px;letter-spacing:1.7px;text-transform:uppercase;color:rgba(255,255,255,.55)}.principal-info{position:absolute;left:0;right:0;bottom:0;padding:28px;background:linear-gradient(180deg,transparent,var(--surface) 22%)}.principal-info .mono{color:var(--accent)}.principal-info h3{font-size:clamp(30px,3.2vw,44px);font-weight:300;line-height:.95;letter-spacing:-.04em;margin-top:8px}.principal-info p{margin-top:11px;color:var(--muted);font-size:11px;line-height:1.7}.team-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.team-member{padding:22px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-soft);min-height:180px;transition:transform .35s var(--ease),border-color .35s ease,background .35s ease}.team-member:hover{transform:translateY(-5px);border-color:var(--accent);background:var(--surface2)}.team-number{display:block;color:var(--accent);font-size:8px;letter-spacing:2px;margin-bottom:35px}.team-member h4{font-size:23px;font-weight:300;letter-spacing:-.03em}.team-member p{margin-top:9px;color:var(--muted);font-size:10px;line-height:1.6}
+
+/* build services */
+.build-view,.category-view,.blog-view,.news-view{display:none;min-height:100vh;background:var(--bg)}.build-view.active,.category-view.active,.blog-view.active,.news-view.active{display:block}
+.page-hero{position:relative;min-height:520px;padding-top:120px;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg2);border-bottom:1px solid var(--line)}.page-hero-media{position:absolute;inset:0}.page-hero-media img{width:100%;height:100%;object-fit:cover;filter:brightness(.53) saturate(.8);transform:scale(1.02)}.page-hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.15)),linear-gradient(0deg,rgba(0,0,0,.78),transparent 52%)}.page-hero-copy{position:relative;z-index:2;padding:120px 0 62px;color:#fff}.page-hero-copy h1{font-size:clamp(50px,7vw,108px);font-weight:300;line-height:.88;letter-spacing:-.06em;max-width:960px}.page-hero-copy p{max-width:560px;margin-top:20px;color:rgba(255,255,255,.78);font-size:12px;line-height:1.85}.page-back{display:inline-flex;align-items:center;gap:9px;margin-bottom:24px;color:rgba(255,255,255,.72);font-size:8px;letter-spacing:2px;text-transform:uppercase}
+.build-body{padding:95px 0 130px}.build-intro{display:grid;grid-template-columns:1fr 1.25fr;gap:65px;padding-bottom:55px;border-bottom:1px solid var(--line)}.build-intro h2{font-size:clamp(38px,4.7vw,68px);font-weight:300;line-height:.95;letter-spacing:-.05em}.build-intro p{max-width:660px;color:var(--muted);font-size:13px;line-height:1.9}.build-service-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--line);margin-top:55px}.build-service-item{min-height:245px;padding:28px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(145deg,color-mix(in srgb,var(--surface) 92%,transparent),transparent 65%);transition:transform .4s var(--ease),background .35s ease,border-color .35s ease}.build-service-item:hover{transform:translateY(-3px);background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 38%,var(--line))}.build-service-item>span{display:block;color:var(--accent);font-size:8px;letter-spacing:2px;margin-bottom:48px}.build-service-item h3{font-size:27px;font-weight:300;line-height:.98;letter-spacing:-.03em}.build-service-item p{margin-top:12px;color:var(--muted);font-size:11px;line-height:1.75}.build-close{padding-top:110px;text-align:center}.build-close h2{font-size:clamp(43px,6vw,82px);font-weight:300;line-height:.94;letter-spacing:-.055em}.service-cta{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding-bottom:9px;border-bottom:1px solid var(--line2);font-size:9px;letter-spacing:2px;text-transform:uppercase;transition:color .3s ease,border-color .3s ease,transform .4s var(--ease)}.service-cta:hover{color:var(--accent);border-color:var(--accent);transform:translateX(4px)}
+
+/* category */
+.category-body{padding:105px 0 120px}.category-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;padding-bottom:35px;border-bottom:1px solid var(--line);margin-bottom:50px}.category-head h1{font-size:clamp(54px,7.5vw,108px);font-weight:300;line-height:.87;letter-spacing:-.06em}.category-head p{max-width:500px;color:var(--muted);font-size:12px;line-height:1.85}.category-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}.cat-project{position:relative;min-height:540px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft)}.cat-project img{width:100%;height:100%;object-fit:cover;filter:brightness(.82) saturate(.88);transition:transform 1.1s var(--ease),filter .8s ease}.cat-project:hover img{transform:scale(1.045);filter:brightness(.95) saturate(1)}.cat-info{position:absolute;left:28px;right:28px;bottom:28px;color:#fff;z-index:2}.cat-info small{color:#e4c78a;font-size:8px;letter-spacing:2px;text-transform:uppercase}.cat-info h3{font-size:clamp(29px,3vw,45px);font-weight:300;line-height:.95;letter-spacing:-.04em;margin-top:8px}.cat-info p{margin-top:9px;color:rgba(255,255,255,.72);font-size:9px;letter-spacing:1.6px;text-transform:uppercase}
+
+/* blog / news */
+.content-view{padding:105px 0 125px}.listing-hero{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;padding-bottom:40px;border-bottom:1px solid var(--line);margin-bottom:52px}.listing-hero h1{font-size:clamp(55px,7vw,110px);font-weight:300;line-height:.88;letter-spacing:-.06em}.listing-hero p{max-width:620px;color:var(--muted);font-size:13px;line-height:1.9;align-self:end}.post-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.post-card{border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-soft);overflow:hidden;transition:transform .35s var(--ease),border-color .35s ease}.post-card:hover{transform:translateY(-5px);border-color:var(--accent)}.post-image{height:240px;overflow:hidden}.post-image img{width:100%;height:100%;object-fit:cover;filter:brightness(.82) saturate(.88);transition:transform 1s var(--ease),filter .7s ease}.post-card:hover .post-image img{transform:scale(1.05);filter:brightness(.95) saturate(1)}.post-body{padding:22px}.post-kicker{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}.post-body h3{font-size:27px;font-weight:300;line-height:1;letter-spacing:-.03em;margin-top:10px}.post-body p{margin-top:11px;color:var(--muted);font-size:11px;line-height:1.75}.post-body .text-link{margin-top:20px}
+
+/* footer */
+footer{padding:88px 0 28px;border-top:1px solid var(--line);background:var(--bg)}.footer-grid{width:min(100%,var(--max));margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1.35fr .8fr .85fr 1.05fr;gap:42px;margin-bottom:62px}.wordmark{font-family:"UnifrakturMaguntia",serif;font-size:clamp(42px,4vw,66px);line-height:.9}.footer-brand p,.footer-col li,.footer-col a{font-size:11px;line-height:1.75;color:var(--muted)}.footer-brand p{max-width:410px;margin-top:18px}.footer-col h4{font-size:8px;letter-spacing:2.4px;text-transform:uppercase;color:var(--text);margin-bottom:17px}.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-col a:hover{color:var(--text)}.footer-bottom{width:min(100%,var(--max));margin:0 auto;padding:18px var(--gutter) 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--soft);font-size:8px;letter-spacing:1.6px;text-transform:uppercase}
+.socials{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}.social{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line2);background:var(--surface);color:var(--muted);transition:transform .3s var(--ease),color .25s ease,border-color .25s ease,box-shadow .3s ease}.social svg{width:15px;height:15px;fill:currentColor}.social:hover{transform:translateY(-3px);color:var(--text);border-color:var(--accent);box-shadow:0 10px 24px color-mix(in srgb,var(--accent) 18%,transparent)}
+
+/* floating booking */
+.booking-float{position:fixed;right:24px;bottom:22px;z-index:3500;display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line2);background:var(--surface);box-shadow:var(--shadow);font-size:8px;letter-spacing:1.8px;text-transform:uppercase;transition:transform .4s var(--ease),border-color .25s ease,background .25s ease}.booking-float:hover{transform:translateY(-5px);border-color:var(--accent)}.booking-float span{display:inline-block;width:9px;height:9px;border:1px solid var(--accent);border-radius:50%}
+
+/* booking modal */
+.modal{position:fixed;inset:0;z-index:8000;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(0,0,0,.62);backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}.modal.open{opacity:1;visibility:visible}.modal-card{width:min(920px,100%);max-height:min(92vh,900px);overflow:auto;background:var(--surface);border:1px solid var(--line2);box-shadow:var(--shadow);padding:32px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:25px;padding-bottom:22px;border-bottom:1px solid var(--line)}.modal-head h2{font-size:clamp(35px,4.3vw,60px);font-weight:300;line-height:.92;letter-spacing:-.05em}.modal-close{width:37px;height:37px;border:1px solid var(--line2);background:transparent;font-size:20px}.booking-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:25px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--soft)}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line2);background:var(--surface2);padding:12px 13px;outline:none;font-size:12px;transition:border-color .25s ease,box-shadow .25s ease}.field textarea{min-height:130px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}.booking-submit{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:6px;padding:14px 16px;border:1px solid var(--accent);background:var(--accent-soft);color:var(--text);font-size:9px;letter-spacing:2px;text-transform:uppercase}.booking-status{grid-column:1/-1;color:var(--accent);font-size:10px;line-height:1.6;min-height:17px}
+
+/* mobile */
+@media (max-width:1100px){.brand-caption{display:none}nav ul{gap:17px}.logo-wrap{width:126px;height:78px}.team-grid{grid-template-columns:1fr}.principal-card{min-height:640px}.post-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+@media (max-width:900px){
+  header{padding:10px 18px}header.scrolled{padding:7px 18px}.logo-wrap{width:106px;height:66px}.header-right{margin-left:auto}.theme-toggle span.label{display:none}.theme-toggle{padding:9px}.mobile-toggle{display:block}
+  nav{position:fixed;inset:0;display:grid;place-items:center;background:color-mix(in srgb,var(--bg) 97%,transparent);backdrop-filter:blur(20px);opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}nav.open{opacity:1;visibility:visible}nav ul{flex-direction:column;gap:20px}nav a,.nav-trigger{font-size:12px;letter-spacing:3px}.nav-item .mega-menu{position:static;display:none;width:min(350px,calc(100vw - 55px));transform:none;margin-top:7px;padding:14px;background:var(--surface);box-shadow:none;grid-template-columns:1fr;border-color:var(--line)}.nav-item.open .mega-menu{display:grid}.mega-intro{display:none}.mega-col a{justify-content:center}.mega-col h4{display:none}
+  .hero{height:86svh;min-height:560px}.hero-slide-indicator{left:50%;right:auto;bottom:28px}.hero-slide-caption{left:18px;top:96px}.hero h1{font-size:clamp(50px,12vw,82px)}.hero-content{display:block;bottom:92px}.hero-note{max-width:360px;margin-top:20px}.hero-bottom{bottom:16px}.hero-meta{display:none}.hero[data-tone="light"] .hero-media::after{background:linear-gradient(90deg,rgba(255,255,255,.54),rgba(255,255,255,.15)),linear-gradient(0deg,rgba(255,255,255,.38),transparent 52%)}
+  .section-head{align-items:flex-start;flex-direction:column;gap:18px}.project-grid{grid-template-columns:1fr}.project-card:nth-child(2){margin-top:0}.project-card{min-height:520px}.strength-grid{grid-template-columns:1fr}.strength-card{min-height:500px}.service-grid{grid-template-columns:1fr}.education{grid-template-columns:1fr;gap:28px}.archive-grid{grid-template-columns:1fr}.archive-intro{position:static}.archive-list{margin-top:12px}.build-intro{grid-template-columns:1fr}.build-service-list{grid-template-columns:1fr}.category-head,.listing-hero{grid-template-columns:1fr;display:grid;gap:24px;align-items:start}.category-cards{grid-template-columns:1fr}.post-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.booking-float{right:16px;bottom:16px}
+}
+@media (max-width:560px){
+  .section{padding-left:18px;padding-right:18px}.section-pad{padding-top:78px;padding-bottom:82px}.section-title{font-size:clamp(37px,11vw,56px)}
+  .hero{height:82svh;min-height:520px}.hero-slide-indicator{left:50%;right:auto;bottom:24px}.hero-slide-label{margin-left:auto}.hero-slide-caption{left:18px;top:86px}.hero-content{left:18px;right:18px;bottom:82px}.hero h1{font-size:clamp(48px,14vw,70px)}.hero-sub{font-size:8px;letter-spacing:2px}.hero-note{font-size:10px}.hero-bottom{left:18px;right:18px}.hero-scroll{gap:8px}.hero-scroll i{width:1px;height:30px}
+  .projects{padding-top:78px}.project-filter-wrap{margin-bottom:34px}.rail-label{gap:15px}.rail-label span{white-space:nowrap}.project-filter{gap:7px}.filter-btn{padding:8px 10px}.project-card{min-height:420px}.project-info{left:20px;right:20px;bottom:20px}.project-info h3{font-size:31px}.project-arrow{width:36px;height:36px}
+  .archive{padding:78px 0 88px}.archive-row{grid-template-columns:35px 1fr auto;gap:12px;padding:19px 0}.archive-note{display:none}
+  .strength-card{min-height:430px}.strength-info{left:20px;right:20px;bottom:20px}.strength-info h3{font-size:49px}.hospitality-mark{width:126px;height:126px;top:22px;left:22px}.hospitality-mark span{font-size:72px}.service{min-height:355px;padding:0 20px 24px}.service-thumb{margin:0 -20px 24px;height:170px}.service-label{top:189px;right:20px}.education{padding-top:70px}.education h3{font-size:43px}.course-tags{gap:5px}.course-tags span{font-size:7px;padding:7px 8px}
+  .team{padding:80px 0}.principal-card{min-height:560px}.principal-info{padding:20px}.team-list{grid-template-columns:1fr}.team-member{min-height:150px}
+  .page-hero{min-height:430px}.page-hero-copy{padding-top:100px;padding-bottom:42px}.page-hero-copy h1{font-size:clamp(46px,13vw,70px)}.build-body,.category-body,.content-view{padding-top:78px;padding-bottom:90px}.build-service-item{min-height:215px;padding:24px}.build-service-item>span{margin-bottom:30px}.category-head h1,.listing-hero h1{font-size:clamp(50px,14vw,74px)}.cat-project{min-height:430px}.post-image{height:210px}
+  .footer-grid{grid-template-columns:1fr;padding-left:18px;padding-right:18px}.footer-bottom{padding-left:18px;padding-right:18px}.booking-float{width:48px;height:48px;border-radius:50%;padding:0;justify-content:center}.booking-float .booking-label{display:none}.booking-float span{width:11px;height:11px}.modal{padding:10px}.modal-card{padding:20px}.booking-form{grid-template-columns:1fr}.field.full{grid-column:auto}.booking-submit,.booking-status{grid-column:auto}.modal-head h2{font-size:39px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* ================================================================
+   2026 REPAIR LAYER — visual continuity, responsiveness, accessibility
+   ================================================================ */
+html{background:var(--bg);transition:background-color .55s ease}
+body{min-height:100vh}
+button,a,input,select,textarea{outline-offset:4px}
+:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
+
+/* Native View Transitions create a single, cohesive theme fade where supported. */
+::view-transition-old(root){animation:theme-old .52s ease both}
+::view-transition-new(root){animation:theme-new .72s var(--ease) both}
+@keyframes theme-old{to{opacity:.12;filter:blur(2px)}}
+@keyframes theme-new{from{opacity:0;filter:blur(3px)}}
+.theme-fade{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;transition:opacity .3s ease;background:var(--bg)}
+.theme-fade.active{opacity:.36}
+
+/* Softer section boundaries — no hard horizontal blocks. */
+.section-head{position:relative;border-bottom:0}
+.section-head::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,var(--line2),color-mix(in srgb,var(--line) 40%,transparent) 58%,transparent)}
+.projects{margin-top:-1px;background:linear-gradient(180deg,var(--bg) 0%,color-mix(in srgb,var(--bg2) 24%,var(--bg)) 100%)}
+.archive{position:relative;border:0;background:linear-gradient(180deg,color-mix(in srgb,var(--bg2) 78%,var(--bg)) 0%,var(--bg2) 48%,color-mix(in srgb,var(--bg) 72%,var(--bg2)) 100%)}
+.strengths{position:relative;background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 94%,var(--bg2)),var(--bg))}
+.services{background:radial-gradient(circle at 8% 20%,var(--accent-soft),transparent 23%),linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--bg2) 28%,var(--bg)))}
+.education{border-top:0;position:relative}
+.education::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--line2) 22%,var(--line2) 78%,transparent)}
+.team{border:0;background:linear-gradient(180deg,color-mix(in srgb,var(--bg2) 82%,var(--bg)),var(--bg2) 50%,color-mix(in srgb,var(--bg) 84%,var(--bg2)))}
+.blog-section,.news-section{position:relative;isolation:isolate}
+.blog-section{background:linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--bg2) 34%,var(--bg)))}
+.news-section{background:linear-gradient(180deg,color-mix(in srgb,var(--bg2) 34%,var(--bg)),var(--bg))}
+footer{border-top:0;background:linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--bg2) 24%,var(--bg)))}
+
+/* Header / glass surfaces */
+header.scrolled{background:color-mix(in srgb,var(--header) 92%,transparent);box-shadow:0 12px 42px rgba(0,0,0,.08)}
+.mega-menu{background:var(--glass-strong);border-color:var(--line2);border-radius:4px;-webkit-backdrop-filter:blur(28px) saturate(135%);backdrop-filter:blur(28px) saturate(135%)}
+.theme-toggle,.booking-float,.mobile-toggle{background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(130%);backdrop-filter:blur(20px) saturate(130%)}
+
+/* Slightly softer project/content cards without turning the site into a rounded UI kit. */
+.project-card,.strength-card,.service,.principal-card,.team-member,.post-card,.cat-project,.modal-card{border-color:color-mix(in srgb,var(--line) 86%,transparent)}
+.project-card,.strength-card,.principal-card,.post-card,.cat-project{border-radius:3px}
+
+/* Studio philosophy: responsive classes replace fragile inline grids. */
+.studio-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:55px}
+.studio-lead{font-size:15px;line-height:1.9;color:var(--muted)}
+.studio-values{position:relative;padding-top:23px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.studio-values::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
+.studio-value strong{display:block;font-size:14px;margin-top:8px;font-weight:500}
+
+/* Polished empty/capability state. */
+.card-empty{min-height:280px;border:1px solid var(--line);background:radial-gradient(circle at 80% 20%,var(--accent-soft),transparent 30%),linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface2) 40%,transparent));box-shadow:none}
+.card-empty strong{font-size:clamp(25px,3vw,38px)}
+
+/* Floating back-to-top control. */
+.back-to-top{position:fixed;right:24px;bottom:75px;z-index:3400;width:42px;height:42px;border:1px solid var(--line2);border-radius:50%;display:grid;place-items:center;background:var(--glass);color:var(--text);box-shadow:var(--shadow-soft);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .35s ease,visibility .35s ease,transform .45s var(--ease),border-color .25s ease}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.back-to-top:hover{border-color:var(--accent);transform:translateY(-3px)}
+
+/* Modal accessibility / finish. */
+.modal-card{outline:0}
+.booking-status{max-width:680px}
+
+@media (max-width:900px){
+  .nav-item{position:relative}
+  .hero{height:88svh;min-height:560px}
+  .hero-content{bottom:112px}
+  .hero-slide-indicator{bottom:25px}
+  .studio-grid{grid-template-columns:1fr;gap:30px}
+  .studio-values{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .back-to-top{right:16px;bottom:76px}
+}
+@media (max-width:560px){
+  .hero{height:84svh;min-height:520px}
+  .hero-content{bottom:98px}
+  .hero-slide-indicator{bottom:20px}
+  .hero-bottom{bottom:20px}
+  .studio-values{grid-template-columns:1fr;gap:17px}
+  .studio-value{padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .studio-value:last-child{border-bottom:0}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .back-to-top{width:46px;height:46px;bottom:72px}
+}
+@media (prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important}
+}
+
+
+
+/* ========================================================================
+   CONTRAST AUDIT — photography, light mode and dark mode
+   Text over photography is intentionally independent from the page theme.
+   ======================================================================== */
+
+/* Hero photography: always use a controlled dark scrim + light typography.
+   The previous automatic light/dark image-tone switch failed on mixed images
+   (bright sky + dark architecture), producing black text on dark areas. */
+.hero .hero-media::after,
+.hero[data-tone="light"] .hero-media::after,
+.hero[data-tone="dark"] .hero-media::after{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.22) 34%,rgba(0,0,0,.10) 53%,rgba(0,0,0,.20) 72%,rgba(0,0,0,.48) 100%),
+    linear-gradient(0deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.10) 42%,rgba(0,0,0,.04) 72%,rgba(0,0,0,.16) 100%);
+}
+.hero .hero-copy,
+.hero[data-tone="light"] .hero-copy,
+.hero[data-tone="dark"] .hero-copy,
+.hero h1{
+  color:#fff;
+  text-shadow:0 3px 28px rgba(0,0,0,.42);
+}
+.hero .eyebrow{color:#dfbd7b;text-shadow:0 2px 16px rgba(0,0,0,.55)}
+.hero .hero-sub,
+.hero[data-tone="light"] .hero-sub,
+.hero[data-tone="dark"] .hero-sub{
+  color:rgba(255,255,255,.94);
+  text-shadow:0 2px 16px rgba(0,0,0,.68);
+}
+.hero .hero-note,
+.hero[data-tone="light"] .hero-note,
+.hero[data-tone="dark"] .hero-note{
+  color:rgba(255,255,255,.90);
+  text-shadow:0 2px 16px rgba(0,0,0,.72);
+}
+.hero-slide-caption,.hero-bottom{color:rgba(255,255,255,.86);text-shadow:0 2px 14px rgba(0,0,0,.62)}
+.hero-meta b{color:#fff}
+
+/* Header while it is physically over photography. This is independent of
+   dark/light mode. Once the header gets its surface, normal theme colors return. */
+header.over-media .logo-dark{opacity:1}
+header.over-media .logo-light{opacity:0}
+header.over-media .brand-caption{color:rgba(255,255,255,.82);text-shadow:0 2px 12px rgba(0,0,0,.50)}
+header.over-media nav > ul > li > a,
+header.over-media nav > ul > li > .nav-trigger{color:rgba(255,255,255,.88);opacity:.88;text-shadow:0 2px 12px rgba(0,0,0,.50)}
+header.over-media nav > ul > li > a:hover,
+header.over-media nav > ul > li > a.active,
+header.over-media nav > ul > li > .nav-trigger:hover{color:#fff;opacity:1}
+header.over-media .theme-toggle{
+  color:#fff;
+  background:rgba(0,0,0,.24);
+  border-color:rgba(255,255,255,.28);
+  box-shadow:0 12px 32px rgba(0,0,0,.16);
+}
+header.over-media .theme-toggle:hover{background:rgba(0,0,0,.34);border-color:rgba(255,255,255,.52)}
+header.over-media .mobile-toggle{background:rgba(0,0,0,.24);border-color:rgba(255,255,255,.28)}
+header.over-media .mobile-toggle span,
+header.over-media .mobile-toggle span::before,
+header.over-media .mobile-toggle span::after{background:#fff}
+header.over-media .mobile-toggle.open span{background:transparent}
+
+/* When the mobile navigation panel is open, it sits on a theme surface rather
+   than photography, so restore the current theme's foreground colors. */
+header.over-media nav.open > ul > li > a,
+header.over-media nav.open > ul > li > .nav-trigger{color:var(--text);text-shadow:none}
+
+/* Back links on non-photo views were inheriting the white page-hero color. */
+.category-view .page-back,
+.blog-view .page-back,
+.news-view .page-back{color:var(--muted)!important}
+.category-view .page-back:hover,
+.blog-view .page-back:hover,
+.news-view .page-back:hover{color:var(--text)!important}
+.build-view .page-back{color:rgba(255,255,255,.80)}
+
+/* Small utility text is used at 8–10px throughout the interface, so keep it
+   above a stronger contrast floor in both themes. */
+html[data-theme="light"] .mono,
+html[data-theme="light"] .rail-label,
+html[data-theme="light"] .archive-no,
+html[data-theme="light"] .archive-note,
+html[data-theme="light"] .footer-bottom{color:#707070}
+html[data-theme="dark"] .mono,
+html[data-theme="dark"] .rail-label,
+html[data-theme="dark"] .archive-no,
+html[data-theme="dark"] .archive-note,
+html[data-theme="dark"] .footer-bottom{color:#929692}
+
+/* Keep image-card information readable regardless of selected page theme. */
+.project-info,.cat-info,.strength-info{color:#fff}
+.project-info p,.cat-info p,.strength-info p{color:rgba(255,255,255,.78)}
+
+/* Final specificity cleanup */
+.principal-photo.has-photo::before{opacity:0}
+main section[id],footer[id]{scroll-margin-top:96px}
+.listing-hero .section-title{font-size:clamp(52px,6.2vw,96px);font-weight:300;line-height:.9;letter-spacing:-.055em}
+@media (max-width:900px){main section[id],footer[id]{scroll-margin-top:82px}}
+
+</style>
 </head>
-
 <body>
-
-	<div class="preloader"></div>
-
-	<div class="nav nav-overlay">
-		<div class="nav__content">
-			<div class="container">
-				<div class="row p-4 p-md-0 flex-column-reverse flex-md-row g-md-5 nav__block">
-					<div class="col-md-5">
-						<ul class="nav__list d-none d-md-block">
-							<li class="nav__list-item active-nav"><a href="index.html" class="hover-target">Home</a>
-							</li>
-							<li class="nav__list-item"><a href="index.html" class="hover-target">Onepage</a></li>
-							<li class="nav__list-item"><a href="index.html" class="hover-target">Styles</a></li>
-							<li class="nav__list-item"><a href="index.html" class="hover-target">Blog</a></li>
-							<li class="nav__list-item"><a href="single-post.html" class="hover-target">Single Post</a>
-							</li>
-							<li class="nav__list-item"><a href="contact.html" class="hover-target">Contact us</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4 text-white">
-						<h3 class="text-white fw-bold nav__block-item">Contact info</h3>
-						<p class="text-light nav__block-item">Officia nisi corrupti eaque cumque exercitationem labore
-							sint sapiente rem neque temporibus id ratione perspiciatis, tenetur est repellendus
-							aspernatur culpa repudiandae omnis.</p>
-						<ul class="list-unstyled text-light nav__block-item">
-							<li class="menu-item">
-								<i class="icon icon-location me-2"></i>2489 Locust Court, Los Angeles
-							</li>
-							<li class="menu-item">
-								<i class="icon icon-location2 me-2"></i>3927 Red Maple Drive, Los Angeles
-							</li>
-							<li class="menu-item">
-								<i class="icon icon-phone me-2"></i>+63 667 341 3463
-							</li>
-							<li class="menu-item">
-								<i class="icon icon-envelope-o me-2"></i><a href="#"
-									class="text-white">contact@example.com</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-3 text-white">
-						<h3 class="text-white fw-bold nav__block-item">Pages</h3>
-						<ul class="list-unstyled nav__block-item">
-							<li><a href="index.html" class="text-white">Onepage </a></li>
-							<li><a href="index.html" class="text-white">Styles </a></li>
-							<li><a href="index.html" class="text-white">Blog </a></li>
-							<li><a href="index.html" class="text-white">Single Post </a></li>
-							<li><a href="index.html" class="text-white">Contact us </a></li>
-							<li><a href="index.html" class="text-white">Portfolio Masonry </a></li>
-							<li><a href="index.html" class="text-white">Portfolio Grid </a></li>
-							<li><a href="index.html" class="text-white">Portfolio Grid </a></li>
-							<li><a href="index.html" class="text-white">Portfolio Grid </a></li>
-							<li><a href="index.html" class="text-white">Single Portfolio </a></li>
-							<li><a href="index.html" class="text-white">About Us </a></li>
-							<li><a href="index.html" class="text-white">Our Team </a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="main-logo">
-		<a href="index.html">A.</a>
-	</div>
-
-	<div class="side-nav-bar">
-		<input id="menu-toggle" type="checkbox" />
-		<label class="menu-btn" for="menu-toggle">
-			<span></span>
-		</label>
-	</div>
-
-	<section id="intro" class="scrollspy-section">
-		<div class="main-slider">
-			<div class="slider-item jarallax" data-speed="0.2">
-				<img src="images/main-banner1.jpg" alt="banner" class="jarallax-img">
-				<div class="banner-content">
-					<h2 class="banner-title txt-fx">Modern Designs</h2>
-					<div class="btn-wrap">
-						<a href="#" class="btn-with-line">View Project</a>
-					</div>
-				</div><!--banner-content-->
-			</div><!--slider-item-->
-
-			<div class="slider-item jarallax" data-speed="0.2">
-				<img src="images/main-banner2.jpg" alt="banner" class="jarallax-img">
-				<div class="banner-content">
-					<h2 class="banner-title txt-fx">Clean & Minimal</h2>
-					<div class="btn-wrap">
-						<a href="#" class="btn-with-line">View Project</a>
-					</div>
-				</div><!--banner-content-->
-			</div><!--slider-item-->
-
-			<div class="slider-item jarallax" data-speed="0.2">
-				<img src="images/main-banner3.jpg" alt="banner" class="jarallax-img">
-				<div class="banner-content">
-					<h2 class="banner-title txt-fx">Personalize and Customize</h2>
-					<div class="btn-wrap">
-						<a href="#" class="btn-with-line">View Project</a>
-					</div>
-				</div><!--banner-content-->
-			</div><!--slider-item-->
-		</div><!--slider-->
-
-		<div class="button-container">
-			<button class="prev slick-arrow">
-				<i class="icon icon-chevron-thin-left"></i>
-			</button>
-			<button class="next slick-arrow">
-				<i class="icon icon-chevron-thin-right"></i>
-			</button>
-		</div>
-	</section>
-
-	<section id="about" class="scrollspy-section padding-xlarge">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-12">
-
-					<div class="section-header">
-						<div class="title">
-							<span>who are we</span>
-						</div>
-						<h2 class="section-title">About Us</h2>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="row">
-
-				<div class="col-md-6">
-					<figure class="jarallax-keep-img">
-						<img src="images/singleimage.jpg" alt="about us" class="jarallax-img single-image">
-					</figure>
-				</div>
-				<div class="col-md-6 description text-lead">
-					<p><strong>Amet, consectetur adipiscing elit. Commodo viverra eu volutpat amet, leo ultrici non
-							senectus odio dolor. Id at urna non porttitor elentum. Viverra senectus lorem ipsum dolor
-							sit adui ultricies dolor varius nibh velit viverra euen.</strong></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo viverra eu volutpat amet, leo
-						non senetus odio dolor. Id at urna non portitor etum. Vivera senectus elit dui ultricies dolor.
-						Varius nibh velit pellentesque sapien, sapien neque dignissim.</p>
-					<p>Commodo vivera eu volutpat amet, leo non senectus odio dolor. Id at urna non porttitor elementum.
-						Viverra senectus dui ultricies dolor.</p>
-
-					<div class="btn-wrap">
-						<a href="#" class="btn btn-accent btn-xlarge btn-rounded">View my portfolio</a>
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-
-	<section id="portfolio" class="scrollspy-section bg-dark padding-large">
-		<div class="container">
-
-			<div class="row">
-				<div class="col-md-12">
-
-					<div class="section-header">
-						<div class="title">
-							<span>Some of Our Works</span>
-						</div>
-						<h2 class="section-title light">Our Portfolio</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-
-				<div id="filters" class="button-group d-flex flex-wrap gap-4 py-5" data-aos="fade-up">
-					<a href="#" class="btn btn-outline-light rounded-pill text-uppercase is-checked"
-						data-filter=".design">Design</a>
-					<a href="#" class="btn btn-outline-light rounded-pill text-uppercase"
-						data-filter=".interior">Interior</a>
-					<a href="#" class="btn btn-outline-light rounded-pill text-uppercase"
-						data-filter=".landscape">Landscape</a>
-					<a href="#" class="btn btn-outline-light rounded-pill text-uppercase"
-						data-filter=".construction">Construction</a>
-				</div>
-
-			</div>
-
-			<div class="grid p-0 clearfix row row-cols-2 row-cols-lg-3 row-cols-xl-3" data-aos="fade-up">
-				<div class="col mb-4 portfolio-item construction interior">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 1."><img src="images/portfolio-thumb-1.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item construction construction">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 2."><img src="images/portfolio-thumb-2.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item construction">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 3."><img src="images/portfolio-thumb-11.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item construction">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 4."><img src="images/portfolio-thumb-4.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item interior">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 5."><img src="images/portfolio-thumb-5.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item design">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 6."><img src="images/portfolio-thumb-6.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item design">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 7."><img src="images/portfolio-thumb-7.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item design">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 8."><img src="images/portfolio-thumb-8.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item design">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 9."><img src="images/portfolio-thumb-9.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item design">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item1 0."><img src="images/portfolio-thumb-10.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item design">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item1 1."><img src="images/portfolio-thumb-11.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item construction">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item1 2."><img src="images/portfolio-thumb-2.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item interior">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 1."><img src="images/portfolio-thumb-3.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item landscape">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 2."><img src="images/portfolio-thumb-8.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item landscape">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 3."><img src="images/portfolio-thumb-1.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item interior">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 4."><img src="images/portfolio-thumb-4.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item interior">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 5."><img src="images/portfolio-thumb-5.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item interior">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 6."><img src="images/portfolio-thumb-6.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item landscape">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 7."><img src="images/portfolio-thumb-7.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item landscape">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item 8."><img src="images/portfolio-thumb-8.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item landscape">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item1 0."><img src="images/portfolio-thumb-10.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item construction">
-					<a href="images/portfolio-large-1.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item1 1."><img src="images/portfolio-thumb-11.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-				<div class="col mb-4 portfolio-item landscape">
-					<a href="images/portfolio-large-2.jpg" class="image-link"
-						title="Sample Caption goes here for Portfolio Item1 2."><img src="images/portfolio-thumb-1.jpg"
-							class="img-fluid" alt="portfolio"></a>
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<section id="services" class="scrollspy-section padding-large">
-		<div class="container">
-			<div class="row">
-				<div class="section-header col-12">
-					<div class="title">
-						<span>what we do</span>
-					</div>
-					<h2 class="section-title">Services</h2>
-				</div>
-
-			</div>
-
-			<div class="row">
-
-				<div class="col-md-4">
-					<div class="services-item">
-						<span class="number">01</span>
-						<h3>Architecture Portfolio</h3>
-						<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis nulla blandit dui.
-						</p>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="services-item">
-						<span class="number">02</span>
-						<h3>Planning Process</h3>
-						<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis nulla blandit dui.
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-4">
-					<div class="services-item">
-						<span class="number">03</span>
-						<h3>Unique Design</h3>
-						<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis nulla blandit dui.
-						</p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-
-	<section id="subscribe" class="scrollspy-section padding-small">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<figure class="subscribe-image">
-						<img src="images/subscribe-image.png" alt="subscribe">
-					</figure>
-				</div>
-				<div class="col-md-6">
-					<div class="subscribe-content">
-						<h2 class="section-title">subscribe us</h2>
-						<p>Join our newsletter to stay updated with super discounts and amazing offers. 300+ have
-							already subscribed us.</p>
-						<form id="form">
-							<input type="text" name="email" placeholder="enter your email address">
-							<button class="btn btn-accent btn-rounded btn-full btn-xlarge">Subscribe</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="latest-blog" class="scrollspy-section bg-grey padding-large">
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col">
-
-					<div class="section-header">
-						<div class="title">
-							<span>read our blog</span>
-						</div>
-						<h2 class="section-title">latest blog</h2>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-
-					<div class="post-grid">
-						<div class="row">
-
-							<div class="col-md-4">
-
-								<article class="post-item">
-
-									<figure>
-										<a href="#" class="image-hvr-effect">
-											<img src="images/postimg1.jpg" alt="post" class="post-image">
-										</a>
-									</figure>
-
-									<div class="post-content">
-										<div class="meta-date">Mar 30, 2021</div>
-										<h3 class="post-title"><a href="#">modern vibes bedrooms, todays trending
-												design</a></h3>
-										<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis
-											nulla blandit dui.</p>
-									</div>
-								</article>
-
-							</div>
-
-							<div class="col-md-4">
-
-								<article class="post-item">
-									<figure>
-										<a href="#" class="image-hvr-effect">
-											<img src="images/postimg2.jpg" alt="post" class="post-image">
-										</a>
-									</figure>
-									<div class="post-content">
-										<div class="meta-date">Mar 29, 2021</div>
-										<h3 class="post-title"><a href="#">How to make minimalist living rooms
-												pop-out</a></h3>
-										<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis
-											nulla blandit dui.</p>
-									</div>
-								</article>
-							</div>
-
-							<div class="col-md-4">
-								<article class="post-item">
-									<figure>
-										<a href="#" class="image-hvr-effect">
-											<img src="images/postimg3.jpg" alt="post" class="post-image">
-										</a>
-									</figure>
-									<div class="post-content">
-										<div class="meta-date">Mar 27, 2021</div>
-										<h3 class="post-title"><a href="#">how to make your resort that looks
-												outstanding</a></h3>
-										<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis
-											nulla blandit dui.</p>
-									</div>
-								</article>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
-
-
-			</div>
-
-			<div class="row">
-				<div class="col">
-
-					<div class="btn-wrap align-center">
-						<a href="#" class="btn btn-xlarge btn-accent btn-rounded">View all blog</a>
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<section id="contact" class="scrollspy-section bg-dark padding-large">
-		<div class="container">
-
-			<div class="row">
-				<div class="col-md-6">
-
-					<div class="left-content">
-
-						<div class="section-header">
-							<div class="title">
-								<span>Get in touch</span>
-							</div>
-							<h2 class="section-title light">Contact us</h2>
-						</div>
-
-						<p>If you have any question about our process or company? Let us know how we can help you.</p>
-
-						<form id="form-contact" class="form-light" action="contact.php">
-							<p>
-								<input type="text" name="name" placeholder="Your Full Name*" required>
-							</p>
-							<p>
-								<input type="text" name="email" placeholder="Your Email Address" required>
-							</p>
-							<p>
-								<textarea name="message" placeholder="Your Message" required></textarea>
-							</p>
-							<p>
-								<label for="agree">
-									<input id="agree" name="agree" type="checkbox" required></input>
-									<span>I agree to privacy policy</span>
-								</label>
-							</p>
-							<button class="btn btn-accent btn-rounded btn-xlarge btn-full">Submit</button>
-						</form>
-
-
-					</div>
-
-				</div><!--left-content-->
-
-				<div class="col-md-6">
-					<div class="right-content">
-
-						<div class="iconbox">
-							<i class="icon icon-location"></i>
-							<div class="detail">
-								<strong>Address 1:</strong>
-								<p>3927 Red Maple Drive, Los Angeles</p>
-							</div>
-						</div>
-						<div class="iconbox">
-							<i class="icon icon-location2"></i>
-							<div class="detail">
-								<strong>Address 2:</strong>
-								<p>2489 Locust Court, Los Angeles</p>
-							</div>
-						</div>
-						<div class="iconbox">
-							<i class="icon icon-phone"></i>
-							<div class="detail">
-								<strong>Phone:</strong>
-								<p>+63 667 341 3463</p>
-							</div>
-						</div>
-						<div class="iconbox">
-							<i class="icon icon-mail3"></i>
-							<div class="detail">
-								<strong>Email:</strong>
-								<p><a href="#">contact@example.com</a></p>
-							</div>
-						</div>
-
-					</div>
-				</div><!--right-content-->
-
-			</div>
-
-		</div>
-	</section>
-
-	<section id="testimonial" class="padding-large">
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col-md-6">
-
-					<figure class="jarallax-keep-img testimonial-image" data-speed="0.5">
-						<img src="images/review-bg.jpg" alt="review" class="jarallax-img">
-					</figure>
-
-				</div>
-
-				<div class="col-md-6">
-
-					<div class="testimonial-block">
-						<div class="section-header">
-							<div class="title">
-								<span>What clients says</span>
-							</div>
-							<h2 class="section-title">Testimonials</h2>
-						</div>
-						<div class="testimonials-inner">
-							<q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat venenatis tempor,
-								turpis dolor. Aliquam faucibus velit, volutpat vulputate risus urna enim.</q>
-							<div class="testimonial-author">
-								<div class="author-detail">
-									<div class="name">Lucifer</div>
-									<div class="author-title">CEO, unity real state</div>
-								</div>
-							</div>
-						</div>
-					</div><!--reviews-content-->
-
-				</div>
-			</div><!--grid-->
-
-		</div>
-	</section>
-
-	<footer id="footer">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-3">
-
-					<div class="footer-menu menu-item-01">
-						<img src="images/logo.png" alt="logo" class="footer-logo">
-						<p>Tristique lacus ullamcorper massa posuere nisl molestie. Nullam motes, tortor masa. Nisl
-							tellus etiam.</p>
-						<div class="social-links">
-							<ul>
-								<li>
-									<a href="#"><i class="icon icon-facebook"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icon icon-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icon icon-youtube-play"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icon icon-behance-square"></i></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="col-md-2">
-
-					<div class="footer-menu menu-item-02">
-						<h5>quick links</h5>
-						<ul class="menu-list">
-							<li class="menu-item">
-								<a href="#">home</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">about us </a>
-							</li>
-							<li class="menu-item">
-								<a href="#">services</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">portfolios</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">blogs</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">contact us</a>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="col-md-4">
-
-					<div class="footer-menu menu-item-03">
-						<h5>contact info</h5>
-						<ul class="menu-list">
-							<li class="menu-item">
-								<i class="icon icon-location"></i>2489 Locust Court, Los Angeles
-							</li>
-							<li class="menu-item">
-								<i class="icon icon-location2"></i>3927 Red Maple Drive, Los Angeles
-							</li>
-							<li class="menu-item">
-								<i class="icon icon-phone"></i>+63 667 341 3463
-							</li>
-							<li class="menu-item">
-								<i class="icon icon-envelope-o"></i><a href="#" class="mail-id">contact@example.com</a>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-
-					<div class="footer-menu menu-item-04">
-						<h5>gallery</h5>
-						<div class="gallery">
-							<a href="images/spacejoy.jpg" data-lightbox-gallery="gallery1"
-								title="Calm Before The Storm (One Shoe Photography Ltd.)" class="image-link"><img
-									src="images/tab1.jpg" alt="house" class="gallery-image"></a>
-							<a href="images/interior.jpg" data-lightbox-gallery="gallery1"
-								title="Grasmere Lake (Phil 'the link' Whittaker (gizto29))" class="image-link"><img
-									src="images/tab2.jpg" alt="house" class="gallery-image"></a>
-							<a href="images/interior.jpg" data-lightbox-gallery="gallery1"
-								title="Grasmere Lake (Phil 'the link' Whittaker (gizto29))" class="image-link"><img
-									src="images/tab3.jpg" alt="house" class="gallery-image"></a>
-							<a href="images/interior.jpg" data-lightbox-gallery="gallery1"
-								title="Grasmere Lake (Phil 'the link' Whittaker (gizto29))" class="image-link"><img
-									src="images/postimg1.jpg" alt="house" class="gallery-image"></a>
-							<a href="images/interior.jpg" data-lightbox-gallery="gallery1"
-								title="Grasmere Lake (Phil 'the link' Whittaker (gizto29))" class="image-link"><img
-									src="images/postimg2.jpg" alt="house" class="gallery-image"></a>
-							<a href="images/interior.jpg" data-lightbox-gallery="gallery1"
-								title="Grasmere Lake (Phil 'the link' Whittaker (gizto29))" class="image-link"><img
-									src="images/postimg3.jpg" alt="house" class="gallery-image"></a>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</div>
-	</footer>
-
-	<div id="footer-bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="copyright">
-						<p>© 2022 Archi. All rights reserved.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="copyright text-right">
-						<p>HTML Template by <a href="https://www.templatesjungle.com/"
-								target="_blank">TemplatesJungle</a> distributed By <a href="https://themewagon.com" target="blank">ThemeWagon</a> </p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="js/ui-easing.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-		crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/script.js"></script>
-
+<div class="progress"><span id="progressBar"></span></div>
+
+<header id="header">
+  <a href="#home" class="brand" aria-label="Barkwood Design home"><span class="logo-wrap"><img class="logo-dark" src="assets/logo-white.png" alt="Barkwood Design" loading="eager" decoding="async"><img class="logo-light" src="assets/logo-black.png" alt="Barkwood Design" loading="eager" decoding="async"></span><span class="brand-caption">Architecture · Interior · Built Environment</span></a>
+  <nav id="nav" aria-label="Primary">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li class="nav-item" id="projectsMenu"><button class="nav-trigger" type="button" aria-expanded="false">Projects <span class="chevron">⌄</span></button>
+        <div class="mega-menu">
+          <div class="mega-intro"><b>Project archive.</b><p>Residential is the studio's major focus, with hospitality and broader architectural work across many building types.</p><a href="#projects" class="text-link">View all projects <span>↗</span></a></div>
+          <div class="mega-col"><h4>Main sectors</h4><a href="#category/residential">Residential <span>01</span></a><a href="#category/hospitality">Hospitality <span>02</span></a><a href="#category/commercial">Commercial <span>03</span></a><a href="#category/corporate">Corporate <span>04</span></a><a href="#category/mixed-use">Mixed Use <span>05</span></a></div>
+          <div class="mega-col"><h4>Specialist</h4><a href="#category/urban-planning">Urban Planning <span>06</span></a><a href="#category/landscape">Landscape <span>07</span></a><a href="#category/sacred">Sacred Institutes <span>08</span></a><a href="#category/hospitals">Hospitals <span>09</span></a><a href="#category/education">Education <span>10</span></a></div>
+        </div>
+      </li>
+      <li><a href="#services">Services</a></li><li><a href="#build-services">Build Services</a></li><li><a href="#team">Team</a></li><li><a href="#blog">Blog</a></li><li><a href="#news">News</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-right"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode"><span class="theme-icon" id="themeIcon">☾</span><span class="label" id="themeLabel">Dark</span></button><button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button></div>
+</header>
+
+<main id="homeView">
+  <section class="hero-shell"><section class="hero" id="home">
+  <div class="hero-media"><img id="heroImageA" class="active" src="assets/hero-signature-residence.png" alt="Barkwood Design Signature Residence" fetchpriority="high" decoding="async"><img id="heroImageB" src="assets/highrise-perspective.jpg" alt="Barkwood Design High-Rise Architecture" decoding="async"></div>
+  <div class="hero-slide-caption" id="heroSlideCaption">01 · Signature Residence</div>
+  <div class="hero-content"><div class="hero-copy"><span class="eyebrow" id="heroEyebrow">Featured Work · Residential</span><h1 id="heroTitle">Signature<br><span>Residence</span></h1><p class="hero-sub" id="heroSub">Architecture · Interior · Landscape</p></div><p class="hero-note" id="heroNote">A composed residential language built around proportion, warm materiality, controlled landscape and a strong arrival sequence.</p></div>
+  <div class="hero-slide-indicator" id="heroSlideIndicator" aria-label="Hero slides"></div>
+  <div class="hero-bottom"><div class="hero-scroll"><i></i><span>Scroll to explore</span></div><div class="hero-meta" id="heroMeta">01 / <b>Featured Residence</b></div></div>
+</section></section>
+
+  <section class="projects section section-pad" id="projects"><div class="section-head reveal"><div><span class="eyebrow">Selected Works</span><h2 class="section-title">Selected work,<br>carefully considered.</h2></div><p class="section-copy">A curated selection of work shaped by proportion, material, context and the experience of moving through space. Explore published projects and the studio’s wider areas of practice.</p></div>
+    <div class="project-filter-wrap"><div class="rail-label"><span>Swipe sectors</span><i>Drag or scroll →</i></div><div class="project-filter" id="projectFilterRail"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="residential">Residential</button><button class="filter-btn" data-filter="hospitality">Hospitality</button><button class="filter-btn" data-filter="commercial">Commercial</button><button class="filter-btn" data-filter="corporate">Corporate</button><button class="filter-btn" data-filter="mixed-use">Mixed Use</button><button class="filter-btn" data-filter="urban-planning">Urban Planning</button><button class="filter-btn" data-filter="landscape">Landscape</button><button class="filter-btn" data-filter="sacred">Sacred Institutes</button><button class="filter-btn" data-filter="hospitals">Hospitals</button><button class="filter-btn" data-filter="education">Education</button></div></div>
+    <div class="project-grid" id="projectGrid"></div>
+  </section>
+
+  <section class="archive"><div class="section archive-grid"><div class="archive-intro reveal"><span class="eyebrow">Project Index</span><h2 class="section-title">Explore by<br>building type.</h2><p>Explore the studio across residential, hospitality, commercial, workplace, planning, landscape and specialist building types.</p></div><div class="archive-list" id="archiveList"></div></div></section>
+
+  <section class="strengths section section-pad" id="strengths"><div class="section-head reveal"><div><span class="eyebrow">Studio Strengths</span><h2 class="section-title">Residential at the core.<br>Hospitality with the same eye.</h2></div><p class="section-copy">Residential is a major strength of Barkwood Design. Hospitality is also a strong capability, with special attention to arrival, atmosphere, circulation, lighting and guest experience.</p></div><div class="strength-grid"><a class="strength-card reveal" href="#category/residential"><img src="assets/visualization-villa-2.jpg" alt="Barkwood Design residential work" loading="lazy" decoding="async"><div class="strength-overlay"></div><div class="strength-info"><span>01 · Major Focus</span><h3>Residential</h3><p>Villas · Houses · Interiors · Landscape</p></div><b>↗</b></a><a class="strength-card strength-hospitality reveal" href="#category/hospitality"><div class="hospitality-mark"><span>H</span><small>GUEST EXPERIENCE</small></div><div class="strength-info"><span>02 · Strong Capability</span><h3>Hospitality</h3><p>Hotels · Restaurants · Lounges · Guest environments</p></div><b>↗</b></a></div></section>
+
+  <section class="services section section-pad" id="services"><div class="section-head reveal"><div><span class="eyebrow">Capabilities</span><h2 class="section-title">From first line<br>to built space.</h2></div><p class="section-copy">The studio can carry a project from concept and visualization into detailing, coordination and practical delivery, keeping the visual language coherent.</p></div><div class="service-grid">
+    <article class="service reveal"><div class="service-thumb"><img src="assets/signature-front.png" alt="Architecture and planning" loading="lazy" decoding="async"><span></span></div><span class="service-no">01</span><span class="service-label">Core</span><h3>Architecture<br>&amp; Planning</h3><p>Concept development, site response, planning, residential architecture and larger scale design frameworks.</p></article>
+    <article class="service reveal"><div class="service-thumb"><img src="assets/interior-premium.png" alt="Interior design and execution" loading="lazy" decoding="async"><span></span></div><span class="service-no">02</span><span class="service-label">Core</span><h3>Interior Design<br>&amp; Execution</h3><p>Interior concepts, material palettes, furniture layouts, detailing, drawings and execution direction.</p></article>
+    <article class="service reveal"><div class="service-thumb"><img src="assets/landscape-courtyard.png" alt="Landscape architecture" loading="lazy" decoding="async"><span></span></div><span class="service-no">03</span><span class="service-label">Specialist</span><h3>Landscape<br>&amp; Experience</h3><p>Arrival sequences, planting language, outdoor rooms and landscape interventions that strengthen the architecture.</p></article>
+    <article class="service reveal"><div class="service-thumb"><img src="assets/urban-aerial.jpg" alt="Urban planning and development" loading="lazy" decoding="async"><span></span></div><span class="service-no">04</span><span class="service-label">Specialist</span><h3>Urban Design<br>&amp; Development</h3><p>Town planning, master planning, circulation, land use logic and contextual development strategies.</p></article>
+    <article class="service reveal"><div class="service-thumb"><img src="assets/visualization-villa.jpg" alt="3D visualization" loading="lazy" decoding="async"><span></span></div><span class="service-no">05</span><span class="service-label">Production</span><h3>3D Visualization<br>&amp; Presentation</h3><p>High quality 3D visualization and presentation imagery that makes design intent clear before construction.</p></article>
+    <article class="service reveal"><div class="service-thumb"><img src="assets/documentation.jpg" alt="Working drawings and documentation" loading="lazy" decoding="async"><span></span></div><span class="service-no">06</span><span class="service-label">Production</span><h3>Documentation<br>&amp; Detail</h3><p>Working drawings, detailed information and coordinated documentation translating design intent into buildable information.</p></article>
+  </div>
+
+  <div class="education reveal" id="education"><div><span class="eyebrow">Interior Design Education</span><h3>Learn from a senior interior design practitioner, not just a classroom syllabus.</h3></div><div class="education-body"><p>Teaching is built around real project thinking: space planning, concept development, materials, detailing, 3D visualization, presentation and the realities of getting a design built.</p><div class="course-tags"><span>Interior Design</span><span>3D Visualization</span><span>Space Planning</span><span>Portfolio</span><span>Design Critique</span><span>Execution Knowledge</span></div><div class="education-world"><strong>STUDENTS WORKING AROUND THE WORLD</strong><span>Practical design thinking · studio critique · project based learning · professional confidence</span></div><a href="#contact" class="text-link" style="margin-top:24px">Discuss teaching &amp; collaboration <span>↗</span></a></div></div>
+  </section>
+
+  <section class="team" id="team"><div class="section"><div class="section-head reveal"><div><span class="eyebrow">Studio Team</span><h2 class="section-title">A connected team<br>from concept to site.</h2></div><p class="section-copy">A compact multidisciplinary team can support design, documentation, visualization, accounts and coordination under one studio language.</p></div><div class="team-grid"><article class="principal-card reveal"><div class="principal-photo"><span class="principal-placeholder">Principal · Barkwood Design</span></div><div class="principal-info"><span class="mono">Principal Architect</span><h3>Studio Principal</h3><p>Architecture, interior design, design direction, client communication and overall project leadership.</p></div></article><div class="team-list"><article class="team-member reveal"><span class="team-number">01</span><h4>Architect</h4><p>Architectural concepts, planning and project development.</p></article><article class="team-member reveal"><span class="team-number">02</span><h4>Interior Designer</h4><p>Interior concepts, materials, furniture and detailing.</p></article><article class="team-member reveal"><span class="team-number">03</span><h4>Draftsman</h4><p>Working drawings, construction details and documentation.</p></article><article class="team-member reveal"><span class="team-number">04</span><h4>3D Visualizer</h4><p>3D modelling, rendering and presentation imagery.</p></article><article class="team-member reveal"><span class="team-number">05</span><h4>Accounts</h4><p>Commercial coordination, records and project administration.</p></article><article class="team-member reveal"><span class="team-number">06</span><h4>Assistant</h4><p>Studio coordination, communications and operational support.</p></article><article class="team-member reveal"><span class="team-number">07</span><h4>Junior 3D Visualizer</h4><p>Model development, materials, lighting and rendering support.</p></article><article class="team-member reveal"><span class="team-number">08</span><h4>Junior Drafts Person</h4><p>Drawing updates, annotations and documentation support.</p></article></div></div></div></section>
+
+  <section class="studio section section-pad" id="studio"><div class="section-head reveal"><div><span class="eyebrow">Studio Philosophy</span><h2 class="section-title">Atmosphere,<br>proportion and place.</h2></div><p class="section-copy">Barkwood Design works between architectural clarity, localized craftsmanship and visualization. The aim is not simply to produce an image, but to build a recognizable spatial character that holds from concept through execution.</p></div><div class="studio-grid"><div class="reveal"><p class="studio-lead">Residential design is a major strength of the studio, complemented by hospitality, commercial, corporate, mixed use, planning, landscape, sacred, healthcare and education work.</p></div><div class="studio-values reveal"><div class="studio-value"><span class="mono">Approach</span><strong>Context + Craft</strong></div><div class="studio-value"><span class="mono">Workflow</span><strong>Design + Delivery</strong></div><div class="studio-value"><span class="mono">Focus</span><strong>Residential + Hospitality</strong></div></div></div></section>
+
+  <section class="blog-section" id="blog"><div class="section content-view"><div class="listing-hero reveal"><div><span class="eyebrow">Blog</span><h2 class="section-title">Findings from<br>practice.</h2></div><p>A living place for research notes, design findings, material observations, case studies and ideas discovered through project work.</p></div><div class="post-grid" id="homeBlogGrid"></div></div></section>
+  <section class="news-section" id="news"><div class="section content-view"><div class="listing-hero reveal"><div><span class="eyebrow">News</span><h2 class="section-title">What is happening<br>at Barkwood.</h2></div><p>Studio updates, project announcements, collaborations, teaching activities and notes from practice.</p></div><div class="post-grid" id="homeNewsGrid"></div></div></section>
+</main>
+
+<section class="category-view" id="categoryView"><div class="section category-body"><a href="#projects" class="page-back">← Back to projects</a><div class="category-head"><div><span class="eyebrow" id="categoryEyebrow">Project Category</span><h1 id="categoryTitle">Residential</h1></div><p id="categorySummary"></p></div><div class="category-cards" id="categoryCards"></div></div></section>
+
+<section class="build-view" id="buildServicesView"><div class="page-hero"><div class="page-hero-media"><img src="assets/studio-lobby.png" alt="Barkwood Design built work" loading="lazy" decoding="async"></div><div class="section page-hero-copy"><a href="#home" class="page-back">← Back to studio</a><span class="eyebrow" style="color:#e3c789">Build Services</span><h1>Design is only the beginning.</h1><p>Alongside design, Barkwood Design can coordinate and deliver the practical work required to turn a project into a finished space.</p></div></div><div class="section build-body"><div class="build-intro"><div><span class="eyebrow">Beyond design</span><h2>One studio.<br>More of the journey.</h2></div><p>Construction coordination and interior execution can include the specialist trades a project needs, from carpentry and electrical work through ceilings, flooring, glass, metalwork, procurement and site coordination. The exact scope can be tailored to the project.</p></div><div class="build-service-list"><div class="build-service-item reveal"><span>01</span><h3>Construction &amp; Civil Works</h3><p>General construction coordination, site works, masonry and the practical delivery packages required by the project.</p></div><div class="build-service-item reveal"><span>02</span><h3>Interior Fit Out</h3><p>Complete interior execution with coordinated finishes, furniture, fixtures and specialist trades.</p></div><div class="build-service-item reveal"><span>03</span><h3>Carpentry &amp; Joinery</h3><p>Custom wardrobes, kitchens, wall panels, doors, counters, furniture and built in joinery.</p></div><div class="build-service-item reveal"><span>04</span><h3>Electrical &amp; Lighting</h3><p>Electrical installation, lighting coordination, feature lighting and practical site execution support.</p></div><div class="build-service-item reveal"><span>05</span><h3>Plumbing, HVAC &amp; MEP</h3><p>Coordination of plumbing, HVAC and other MEP systems required by the project scope.</p></div><div class="build-service-item reveal"><span>06</span><h3>Ceilings, Flooring &amp; Finishes</h3><p>Gypsum and ceiling works, tile, stone, wood, paint, wall finishes and related finishing packages.</p></div><div class="build-service-item reveal"><span>07</span><h3>Aluminium, Glass &amp; Metal</h3><p>Windows, glazing, partitions, railings, feature metalwork and specialist fabrication as required.</p></div><div class="build-service-item reveal"><span>08</span><h3>Procurement &amp; Site Coordination</h3><p>Material selection, vendor coordination, fabrication follow up, sequencing and practical site decisions.</p></div></div><div class="build-close reveal"><span class="eyebrow">The principle</span><h2>Good design should survive<br>the journey from paper to site.</h2><a href="#contact" class="service-cta">Start a project conversation <span>↗</span></a></div></div></section>
+
+<section class="blog-view" id="blogView"><div class="section content-view"><a href="#home" class="page-back" style="color:var(--muted)">← Back to studio</a><div class="listing-hero"><div><span class="eyebrow">Blog</span><h1>Findings from<br>practice.</h1></div><p>Research notes, design findings, material observations and practical ideas drawn from active project work.</p></div><div class="post-grid" id="blogGrid"></div></div></section>
+<section class="news-view" id="newsView"><div class="section content-view"><a href="#home" class="page-back" style="color:var(--muted)">← Back to studio</a><div class="listing-hero"><div><span class="eyebrow">News</span><h1>What is happening<br>at Barkwood.</h1></div><p>Studio news, project launches, collaborations, teaching activities and selected updates from practice.</p></div><div class="post-grid" id="newsGrid"></div></div></section>
+
+<footer id="contact"><div class="footer-grid"><div class="footer-brand"><div class="wordmark">Barkwood Design</div><p>Architecture, interior design, urban planning, landscape, visualization, documentation, execution and construction support under one connected studio approach.</p><div class="socials" aria-label="Social media"><a class="social" aria-label="Facebook" href="https://www.facebook.com/barkwooddesign" target="_blank" rel="noopener">f</a><a class="social" aria-label="Instagram" href="https://www.instagram.com/barkwooddesign" target="_blank" rel="noopener">◎</a><a class="social" aria-label="Pinterest" href="https://www.pinterest.com/barkwooddesign" target="_blank" rel="noopener">p</a><a class="social" aria-label="Google" href="https://www.google.com/search?q=barkwooddesign" target="_blank" rel="noopener">G</a></div></div><div class="footer-col"><h4>Direct Contact</h4><ul><li><a href="mailto:info@barkwooddesign.com">info@barkwooddesign.com</a></li><li><a href="mailto:info@barkwood.com.pk">info@barkwood.com.pk</a></li><li><a href="mailto:barkwooddesignpk@gmail.com">barkwooddesignpk@gmail.com</a></li><li><a href="tel:+924236620206">+92 42 36620206</a></li><li><a href="tel:+923014552275">+92 301 4552275</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="#projects">Projects</a></li><li><a href="#services">Services</a></li><li><a href="#build-services">Build Services</a></li><li><a href="#team">Team</a></li><li><a href="#blog">Blog</a></li><li><a href="#news">News</a></li></ul></div><div class="footer-col"><h4>Studio Locations</h4><ul><li><strong>Head Office</strong><br>Office 103 Floor M1 Eden Tower Main Boulevard Gulberg III Lahore 54000</li><li><strong>Cavalry Office</strong><br>76 Commercial Cavalry Ground Lahore Cantt</li></ul></div></div><div class="footer-bottom"><span>© 2026 Barkwood Design. All rights reserved.</span><span>Building the future</span></div></footer>
+
+<div class="theme-fade" id="themeFade" aria-hidden="true"></div>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+<button class="booking-float" id="bookingFloat" type="button" aria-haspopup="dialog" aria-controls="bookingModal"><span></span><strong class="booking-label">Book a session</strong></button>
+
+<div class="modal" id="bookingModal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingTitle" tabindex="-1"><div class="modal-head"><div><span class="eyebrow">Client Booking</span><h2 id="bookingTitle">Book a design session.</h2></div><button class="modal-close" id="bookingClose" type="button" aria-label="Close">×</button></div><form class="booking-form" id="bookingForm"><div class="field"><label for="name">Name</label><input id="name" name="name" required></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone"></div><div class="field"><label for="session">Session type</label><select id="session" name="session"><option>Design consultation</option><option>Project review</option><option>Interior design discussion</option><option>3D visualization review</option><option>Site or execution discussion</option></select></div><div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date"></div><div class="field"><label for="time">Preferred time</label><input id="time" name="time" type="time"></div><div class="field full"><label for="message">Project details</label><textarea id="message" name="message" placeholder="Tell us what you would like to discuss."></textarea></div><div class="booking-status" id="bookingStatus"></div><button class="booking-submit" type="submit"><span>Request session</span><span>↗</span></button></form></div></div>
+
+<script>
+(() => {
+
+  const EDIT_HERE = {
+    // 1) WEBSITE / BRAND
+    SITE: {
+      browserTitle: 'Barkwood Design | Architecture, Interior & Built Environment',
+      description: 'Barkwood Design. Architecture, interior design, residential, hospitality, planning, landscape, visualization, execution and construction services.',
+      logoWhite: 'assets/logo-white.png',
+      logoBlack: 'assets/logo-black.png',
+      brandCaption: 'Architecture · Interior · Built Environment'
+    },
+
+    // 2) HERO SLIDER — change any image or text here
+    HERO: [
+      { image:'assets/hero-signature-residence.png', eyebrow:'Featured Work · Residential', title:'Signature<br><span>Residence</span>', sub:'Architecture · Interior · Landscape', note:'A composed residential language built around proportion, warm materiality, controlled landscape and a strong arrival sequence.', meta:'Featured Residence' },
+      { image:'assets/highrise-perspective.jpg', eyebrow:'Featured Work · High-Rise', title:'Vertical<br><span>Architecture</span>', sub:'Architecture · Facade · Urban Context', note:'A contemporary high-rise composition focused on strong vertical rhythm, refined material contrast and an expressive skyline presence.', meta:'High-Rise Architecture' },
+      { image:'assets/interior-premium.png', eyebrow:'Featured Work · Interior', title:'Interior<br><span>Atmosphere</span>', sub:'Interior · Material · Experience', note:'A refined interior language where proportion, natural light, texture and crafted details create a calm, elevated experience.', meta:'Interior Design' },
+      { image:'assets/landscape-courtyard.png', eyebrow:'Featured Work · Landscape', title:'Landscape<br><span>Experience</span>', sub:'Landscape · Arrival · Outdoor Rooms', note:'A layered landscape approach connecting architecture to movement, planting, shade and memorable outdoor spaces.', meta:'Landscape Architecture' }
+    ],
+
+    // 3) PROJECTS — add future projects here
+    PROJECTS: [
+      { title:'Signature Residence', category:'residential', categoryLabel:'Residential', location:'Lahore · Pakistan', year:'Featured work', image:'assets/hero-signature-residence.png', gallery:['assets/signature-front.png','assets/signature-entry.png','assets/signature-landscape.png'], description:'A composed residence combining architecture, interiors and landscape into one controlled arrival experience.' }
+    ],
+
+    // 4) PROJECT CATEGORIES
+    CATEGORIES: [
+      ['residential','Residential','Major studio focus with houses, villas, apartments and high end living environments.'],
+      ['hospitality','Hospitality','Hotels, resorts, restaurants, lounges and guest focused environments.'],
+      ['commercial','Commercial','Retail, workplace, office, showroom and public facing commercial spaces.'],
+      ['corporate','Corporate','Corporate workplaces, headquarters and identity led environments.'],
+      ['mixed-use','Mixed Use','Integrated developments combining residential, commercial and civic functions.'],
+      ['urban-planning','Urban Planning','Master plans, societies, development frameworks and city scale strategies.'],
+      ['landscape','Landscape','Landscape architecture, outdoor rooms, planting, arrival and site experience.'],
+      ['sacred','Sacred Institutes','Mosques and other sacred, spiritual or contemplative environments.'],
+      ['hospitals','Hospitals','Healthcare environments with clear circulation, comfort and operational logic.'],
+      ['education','Education','Schools, colleges, universities and learning environments.']
+    ],
+
+    // 5) SERVICES — each item: image, alt, number, label, title, text
+    SERVICES: [
+      {image:'assets/signature-front.png', alt:'Architecture and planning', label:'Core', title:'Architecture<br>&amp; Planning', text:'Concept development, site response, planning, residential architecture and larger scale design frameworks.'},
+      {image:'assets/interior-premium.png', alt:'Interior design and execution', label:'Core', title:'Interior Design<br>&amp; Execution', text:'Interior concepts, material palettes, furniture layouts, detailing, drawings and execution direction.'},
+      {image:'assets/landscape-courtyard.png', alt:'Landscape architecture', label:'Specialist', title:'Landscape<br>&amp; Experience', text:'Arrival sequences, planting language, outdoor rooms and landscape interventions that strengthen the architecture.'},
+      {image:'assets/urban-aerial.jpg', alt:'Urban planning and development', label:'Specialist', title:'Urban Design<br>&amp; Development', text:'Town planning, master planning, circulation, land use logic and contextual development strategies.'},
+      {image:'assets/visualization-villa.jpg', alt:'3D visualization', label:'Production', title:'3D Visualization<br>&amp; Presentation', text:'High quality 3D visualization and presentation imagery that makes design intent clear before construction.'},
+      {image:'assets/documentation.jpg', alt:'Working drawings and documentation', label:'Production', title:'Documentation<br>&amp; Detail', text:'Working drawings, detailed information and coordinated documentation translating design intent into buildable information.'}
+    ],
+
+    // 6) STUDIO STRENGTHS
+    STRENGTHS: {
+      residentialImage:'assets/visualization-villa-2.jpg', residentialLabel:'01 · Major Focus', residentialTitle:'Residential', residentialSub:'Villas · Houses · Interiors · Landscape',
+      hospitalityLabel:'02 · Strong Capability', hospitalityTitle:'Hospitality', hospitalitySub:'Hotels · Restaurants · Lounges · Guest environments'
+    },
+
+    // 7) EDUCATION
+    EDUCATION: {
+      eyebrow:'Interior Design Education', title:'Learn from a senior interior design practitioner, not just a classroom syllabus.',
+      paragraph:'Teaching is built around real project thinking: space planning, concept development, materials, detailing, 3D visualization, presentation and the realities of getting a design built.',
+      tags:['Interior Design','3D Visualization','Space Planning','Portfolio','Design Critique','Execution Knowledge'],
+      worldTitle:'STUDENTS WORKING AROUND THE WORLD', worldText:'Practical design thinking · studio critique · project based learning · professional confidence', linkText:'Discuss teaching & collaboration'
+    },
+
+    // 8) TEAM
+    TEAM: {
+      principal:{ role:'Principal Architect', name:'Waseem A Baig', description:'Architecture, interior design, design direction, client communication and overall project leadership.', photo:'' },
+      members:[
+        ['Architect','Architectural concepts, planning and project development.'],
+        ['Interior Designer','Interior concepts, materials, furniture and detailing.'],
+        ['Draftsman','Working drawings, construction details and documentation.'],
+        ['3D Visualizer','3D modelling, rendering and presentation imagery.'],
+        ['Accounts','Commercial coordination, records and project administration.'],
+        ['Assistant','Studio coordination, communications and operational support.'],
+        ['Junior 3D Visualizer','Model development, materials, lighting and rendering support.'],
+        ['Junior Drafts Person','Drawing updates, annotations and documentation support.']
+      ]
+    },
+
+    // 9) STUDIO PHILOSOPHY
+    STUDIO:{ eyebrow:'Studio Philosophy', title:'Atmosphere,<br>proportion and place.', paragraph:'Barkwood Design works between architectural clarity, localized craftsmanship and visualization. The aim is not simply to produce an image, but to build a recognizable spatial character that holds from concept through execution.', approach:'Context + Craft', workflow:'Design + Delivery', focus:'Residential + Hospitality' },
+
+    // 10) BLOG — 3 cards
+    BLOG:[
+      {title:'Designing the first five minutes of arrival', kicker:'Practice Note', date:'2026', image:'assets/interior-bedroom.png', text:'Observations on approach, thresholds, landscape and the emotional shift between street and interior.'},
+      {title:'What makes a residential space feel complete', kicker:'Finding', date:'2026', image:'assets/architectural-model.png', text:'A working framework for proportion, material hierarchy, lighting and the details that hold a room together.'},
+      {title:'Teaching through real project thinking', kicker:'Education', date:'2026', image:'assets/textile-detail.png', text:'Notes from teaching interior design through active project logic rather than isolated exercises.'}
+    ],
+
+    // 11) NEWS — 3 cards
+    NEWS:[
+      {title:'Barkwood Design project archive is expanding', kicker:'Studio News', date:'2026', image:'assets/highrise-canyon.jpg', text:'The new portfolio structure makes it easier to keep adding projects without changing the navigation.'},
+      {title:'Interior design learning at the studio', kicker:'Education', date:'2026', image:'assets/interior-learning.png', text:'Practical learning continues across space planning, 3D visualization, detailing and execution.'},
+      {title:'Design and delivery under one studio', kicker:'Practice', date:'2026', image:'assets/landscape-patio.png', text:'Barkwood Design is building a stronger link between concept, documentation and site delivery.'}
+    ],
+
+    // 12) BUILD SERVICES
+    BUILD_SERVICES:{
+      heroImage:'assets/studio-lobby.png', heroEyebrow:'Build Services', heroTitle:'Design is only the beginning.', heroText:'Alongside design, Barkwood Design can coordinate and deliver the practical work required to turn a project into a finished space.',
+      items:[
+        ['Construction & Civil Works','General construction coordination, site works, masonry and the practical delivery packages required by the project.'],
+        ['Interior Fit Out','Complete interior execution with coordinated finishes, furniture, fixtures and specialist trades.'],
+        ['Carpentry & Joinery','Custom wardrobes, kitchens, wall panels, doors, counters, furniture and built in joinery.'],
+        ['Electrical & Lighting','Electrical installation, lighting coordination, feature lighting and practical site execution support.'],
+        ['Plumbing, HVAC & MEP','Coordination of plumbing, HVAC and other MEP systems required by the project scope.'],
+        ['Ceilings, Flooring & Finishes','Gypsum and ceiling works, tile, stone, wood, paint, wall finishes and related finishing packages.'],
+        ['Aluminium, Glass & Metal','Windows, glazing, partitions, railings, feature metalwork and specialist fabrication as required.'],
+        ['Procurement & Site Coordination','Material selection, vendor coordination, fabrication follow up, sequencing and practical site decisions.']
+      ]
+    },
+
+    // 13) FOOTER / CONTACT
+    FOOTER:{
+      paragraph:'Architecture, interior design, urban planning, landscape, visualization, documentation, execution and construction support under one connected studio approach.',
+      emails:['info@barkwooddesign.com','info@barkwood.com.pk','barkwooddesignpk@gmail.com'], phone1:'+92 42 36620206', phone2:'+92 301 4552275',
+      headOffice:'Office 103 Floor M1 Eden Tower Main Boulevard Gulberg III Lahore 54000', cavalryOffice:'76 Commercial Cavalry Ground Lahore Cantt',
+      bottomLeft:'© 2026 Barkwood Design. All rights reserved.', bottomRight:'Building the future'
+    },
+
+    // 14) BOOKING POP-UP
+    BOOKING:{ eyebrow:'Client Booking', title:'Book a design session.', submit:'Request session', placeholder:'Tell us what you would like to discuss.' }
+  };
+  /* ★★★★★ EASY EDIT AREA — END ★★★★★ */
+
+  const root=document.documentElement;
+  const body=document.body;
+  const header=document.getElementById('header');
+  const nav=document.getElementById('nav');
+  const mobileToggle=document.getElementById('mobileToggle');
+  const projectsMenu=document.getElementById('projectsMenu');
+  const projectsTrigger=projectsMenu.querySelector('.nav-trigger');
+  const progressBar=document.getElementById('progressBar');
+  const hero=document.getElementById('home');
+  const heroImageA=document.getElementById('heroImageA');
+  const heroImageB=document.getElementById('heroImageB');
+  const heroContent=document.querySelector('.hero-content');
+  const heroEyebrow=document.getElementById('heroEyebrow');
+  const heroTitle=document.getElementById('heroTitle');
+  const heroSub=document.getElementById('heroSub');
+  const heroNote=document.getElementById('heroNote');
+  const heroMeta=document.getElementById('heroMeta');
+  const heroSlideCaption=document.getElementById('heroSlideCaption');
+  const heroSlideIndicator=document.getElementById('heroSlideIndicator');
+  const themeToggle=document.getElementById('themeToggle');
+  const themeLabel=document.getElementById('themeLabel');
+  const themeIcon=document.getElementById('themeIcon');
+  const themeFade=document.getElementById('themeFade');
+  const projectGrid=document.getElementById('projectGrid');
+  const archiveList=document.getElementById('archiveList');
+  const categoryView=document.getElementById('categoryView');
+  const homeView=document.getElementById('homeView');
+  const buildView=document.getElementById('buildServicesView');
+  const blogView=document.getElementById('blogView');
+  const newsView=document.getElementById('newsView');
+  const categoryTitle=document.getElementById('categoryTitle');
+  const categorySummary=document.getElementById('categorySummary');
+  const categoryEyebrow=document.getElementById('categoryEyebrow');
+  const categoryCards=document.getElementById('categoryCards');
+  const bookingModal=document.getElementById('bookingModal');
+  const bookingCard=bookingModal.querySelector('.modal-card');
+  const bookingFloat=document.getElementById('bookingFloat');
+  const bookingClose=document.getElementById('bookingClose');
+  const bookingForm=document.getElementById('bookingForm');
+  const bookingStatus=document.getElementById('bookingStatus');
+  const backToTop=document.getElementById('backToTop');
+
+  const projects=EDIT_HERE.PROJECTS;
+  const categories=EDIT_HERE.CATEGORIES;
+  const categoryMap=Object.fromEntries(categories.map(x=>[x[0],{name:x[1],desc:x[2]}]));
+  const blogPosts=EDIT_HERE.BLOG;
+  const newsPosts=EDIT_HERE.NEWS;
+  const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let activeHeroImage=heroImageA;
+  let heroIndex=0;
+  let heroTimer=null;
+  let heroPaused=false;
+  let lastFocusedBeforeModal=null;
+
+  const storage={
+    get(key){try{return localStorage.getItem(key)}catch(_){return null}},
+    set(key,value){try{localStorage.setItem(key,value)}catch(_){} }
+  };
+
+  function applyEasyEditContent(){
+    document.title=EDIT_HERE.SITE.browserTitle;
+    const desc=document.querySelector('meta[name="description"]'); if(desc)desc.content=EDIT_HERE.SITE.description;
+    document.querySelectorAll('.logo-dark').forEach(el=>el.src=EDIT_HERE.SITE.logoWhite);
+    document.querySelectorAll('.logo-light').forEach(el=>el.src=EDIT_HERE.SITE.logoBlack);
+    const caption=document.querySelector('.brand-caption'); if(caption)caption.textContent=EDIT_HERE.SITE.brandCaption;
+
+    document.querySelectorAll('.service').forEach((card,i)=>{const s=EDIT_HERE.SERVICES[i];if(!s)return;const img=card.querySelector('.service-thumb img');const no=card.querySelector('.service-no');const label=card.querySelector('.service-label');const title=card.querySelector('h3');const p=card.querySelector('p');if(img){img.src=s.image;img.alt=s.alt;img.loading='lazy';img.decoding='async'}if(no)no.textContent=String(i+1).padStart(2,'0');if(label)label.textContent=s.label;if(title)title.innerHTML=s.title;if(p)p.textContent=s.text});
+
+    const st=EDIT_HERE.STRENGTHS;
+    const sr=document.querySelector('.strength-card:first-child');if(sr){const img=sr.querySelector('img');if(img){img.src=st.residentialImage;img.loading='lazy';img.decoding='async'}const all=sr.querySelectorAll('.strength-info > *');if(all[0])all[0].textContent=st.residentialLabel;if(all[1])all[1].textContent=st.residentialTitle;if(all[2])all[2].textContent=st.residentialSub}
+    const sh=document.querySelector('.strength-hospitality');if(sh){const all=sh.querySelectorAll('.strength-info > *');if(all[0])all[0].textContent=st.hospitalityLabel;if(all[1])all[1].textContent=st.hospitalityTitle;if(all[2])all[2].textContent=st.hospitalitySub}
+
+    const ed=EDIT_HERE.EDUCATION;const education=document.getElementById('education');if(education){const els=education.querySelectorAll('.eyebrow,h3,.education-body > p,.education-world strong,.education-world span,.text-link');if(els[0])els[0].textContent=ed.eyebrow;if(els[1])els[1].textContent=ed.title;if(els[2])els[2].textContent=ed.paragraph;if(els[3])els[3].textContent=ed.worldTitle;if(els[4])els[4].textContent=ed.worldText;if(els[5])els[5].innerHTML=ed.linkText+' <span>↗</span>';education.querySelectorAll('.course-tags span').forEach((el,i)=>{if(ed.tags[i]!==undefined)el.textContent=ed.tags[i]})}
+
+    const t=EDIT_HERE.TEAM;const principal=document.querySelector('.principal-card');if(principal){const pEls=principal.querySelectorAll('.principal-info > *');if(pEls[0])pEls[0].textContent=t.principal.role;if(pEls[1])pEls[1].textContent=t.principal.name;if(pEls[2])pEls[2].textContent=t.principal.description;const photo=principal.querySelector('.principal-photo');const placeholder=principal.querySelector('.principal-placeholder');if(t.principal.photo){photo.style.backgroundImage=`url("${t.principal.photo}")`;photo.style.backgroundSize='cover';photo.style.backgroundPosition='center';photo.classList.add('has-photo');if(placeholder)placeholder.hidden=true}else if(placeholder){placeholder.textContent='Principal · Barkwood Design'}}
+    document.querySelectorAll('.team-member').forEach((card,i)=>{const m=t.members[i];if(!m)return;const h=card.querySelector('h4');const p=card.querySelector('p');if(h)h.textContent=m[0];if(p)p.textContent=m[1]});
+
+    const studio=document.getElementById('studio');const s=EDIT_HERE.STUDIO;if(studio){const els=studio.querySelectorAll('.section-head .eyebrow,.section-head .section-title,.section-head .section-copy');if(els[0])els[0].textContent=s.eyebrow;if(els[1])els[1].innerHTML=s.title;if(els[2])els[2].textContent=s.paragraph;const strongs=studio.querySelectorAll('.studio-grid strong');if(strongs[0])strongs[0].textContent=s.approach;if(strongs[1])strongs[1].textContent=s.workflow;if(strongs[2])strongs[2].textContent=s.focus}
+
+    const bs=EDIT_HERE.BUILD_SERVICES;const heroImg=document.querySelector('.page-hero-media img');if(heroImg){heroImg.src=bs.heroImage;heroImg.loading='lazy';heroImg.decoding='async'}const buildCopy=document.querySelector('.page-hero-copy');if(buildCopy){const els=buildCopy.querySelectorAll('.eyebrow,h1,p');if(els[0])els[0].textContent=bs.heroEyebrow;if(els[1])els[1].textContent=bs.heroTitle;if(els[2])els[2].textContent=bs.heroText}document.querySelectorAll('.build-service-item').forEach((item,i)=>{const x=bs.items[i];if(!x)return;const no=item.querySelector('span');const h=item.querySelector('h3');const p=item.querySelector('p');if(no)no.textContent=String(i+1).padStart(2,'0');if(h)h.textContent=x[0];if(p)p.textContent=x[1]});
+
+    const f=EDIT_HERE.FOOTER;const footer=document.querySelector('footer');if(footer){const fp=footer.querySelector('.footer-brand p');if(fp)fp.textContent=f.paragraph;const contacts=footer.querySelectorAll('.footer-col:nth-child(2) li a');[...contacts].forEach((a,i)=>{const value=[...f.emails,f.phone1,f.phone2][i];if(value){a.textContent=value;a.href=i<3?'mailto:'+value:'tel:'+value.replace(/[^+\d]/g,'')}});const loc=footer.querySelectorAll('.footer-col:nth-child(4) li');if(loc[0])loc[0].innerHTML='<strong>Head Office</strong><br>'+f.headOffice;if(loc[1])loc[1].innerHTML='<strong>Cavalry Office</strong><br>'+f.cavalryOffice;const bottom=footer.querySelectorAll('.footer-bottom span');if(bottom[0])bottom[0].textContent=f.bottomLeft;if(bottom[1])bottom[1].textContent=f.bottomRight}
+
+    const b=EDIT_HERE.BOOKING;const els=bookingModal.querySelectorAll('.eyebrow,h2,.booking-submit span');if(els[0])els[0].textContent=b.eyebrow;if(els[1])els[1].textContent=b.title;if(els[2])els[2].textContent=b.submit;const msg=document.getElementById('message');if(msg)msg.placeholder=b.placeholder;
+  }
+
+  function applyTheme(theme){
+    root.dataset.theme=theme;
+    storage.set('barkwood-theme',theme);
+    const light=theme==='light';
+    themeLabel.textContent=light?'Light':'Dark';
+    themeIcon.textContent=light?'☀':'☾';
+    themeToggle.setAttribute('aria-label',light?'Switch to dark mode':'Switch to light mode');
+    const metaTheme=document.querySelector('meta[name="theme-color"]');if(metaTheme)metaTheme.content=light?'#ffffff':'#070707';
+  }
+
+  function setTheme(theme,animate=false){
+    if(!animate||prefersReducedMotion){applyTheme(theme);return}
+    if(document.startViewTransition){document.startViewTransition(()=>applyTheme(theme));return}
+    themeFade.classList.add('active');
+    window.setTimeout(()=>{applyTheme(theme);requestAnimationFrame(()=>themeFade.classList.remove('active'))},130);
+  }
+
+  applyEasyEditContent();
+  setTheme(storage.get('barkwood-theme')||'dark',false);
+  themeToggle.addEventListener('click',()=>setTheme(root.dataset.theme==='dark'?'light':'dark',true));
+
+  function handleScroll(){
+    const y=window.scrollY;
+    const headerOnMedia=y<=28&&(homeView.style.display!=='none'||buildView.classList.contains('active'));
+    header.classList.toggle('over-media',headerOnMedia);
+    header.classList.toggle('scrolled',y>28);
+    const max=document.documentElement.scrollHeight-window.innerHeight;
+    progressBar.style.width=max>0?Math.min(100,y/max*100)+'%':'0%';
+    backToTop.classList.toggle('visible',y>620);
+    const fadeRange=Math.max(360,Math.min(620,hero.offsetHeight*.72));
+    const p=Math.max(0,Math.min(1,y/fadeRange));
+    hero.style.setProperty('--hero-copy-opacity',(1-p*.82).toFixed(3));
+    hero.style.setProperty('--hero-shift',`${(-p*18).toFixed(1)}px`);
+    hero.style.setProperty('--hero-media-scale',(1.025+p*.018).toFixed(4));
+    hero.style.setProperty('--hero-media-opacity',(1-p*.08).toFixed(3));
+  }
+  window.addEventListener('scroll',handleScroll,{passive:true});
+  window.addEventListener('resize',handleScroll,{passive:true});
+  handleScroll();
+
+  function setMobileMenu(open){
+    nav.classList.toggle('open',open);
+    mobileToggle.classList.toggle('open',open);
+    mobileToggle.setAttribute('aria-expanded',String(open));
+    mobileToggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+    body.classList.toggle('menu-open',open);
+    if(!open)setProjectsMenu(false);
+  }
+  function setProjectsMenu(open){
+    projectsMenu.classList.toggle('open',open);
+    projectsTrigger.setAttribute('aria-expanded',String(open));
+  }
+  mobileToggle.addEventListener('click',()=>setMobileMenu(!nav.classList.contains('open')));
+  projectsTrigger.addEventListener('click',()=>setProjectsMenu(!projectsMenu.classList.contains('open')));
+  nav.addEventListener('click',e=>{if(e.target.closest('a'))setMobileMenu(false)});
+
+  const heroSlides=EDIT_HERE.HERO;
+  function preloadHero(index){
+    const slide=heroSlides[(index+heroSlides.length)%heroSlides.length];
+    if(!slide)return;
+    const pre=new Image();pre.decoding='async';pre.src=slide.image;
+  }
+  if('requestIdleCallback' in window)requestIdleCallback(()=>preloadHero(1),{timeout:1500});else setTimeout(()=>preloadHero(1),700);
+
+  function detectHeroTone(){
+    const img=activeHeroImage;if(!img.complete)return;
+    try{const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d',{willReadFrequently:true});const w=32,h=32;canvas.width=w;canvas.height=h;ctx.drawImage(img,0,0,w,h);const data=ctx.getImageData(0,0,w,h).data;let lum=0,n=0;for(let i=0;i<data.length;i+=16){lum+=.2126*data[i]+.7152*data[i+1]+.0722*data[i+2];n++}hero.dataset.tone=(lum/n>145?'light':'dark')}catch(_){hero.dataset.tone='dark'}
+  }
+  function renderHeroIndicators(){
+    heroSlideIndicator.innerHTML=heroSlides.map((s,i)=>`<button class="hero-slide-dot ${i===heroIndex?'active':''}" type="button" aria-label="Show ${i+1}: ${s.meta}" data-hero-slide="${i}" aria-current="${i===heroIndex?'true':'false'}"></button>`).join('');
+    heroSlideIndicator.querySelectorAll('.hero-slide-dot').forEach(btn=>btn.addEventListener('click',()=>showHeroSlide(Number(btn.dataset.heroSlide),true)));
+  }
+  function restartHeroTimer(){clearInterval(heroTimer);heroTimer=setInterval(()=>{if(!heroPaused&&!document.hidden)showHeroSlide(heroIndex+1)},6500)}
+  function showHeroSlide(index,manual=false){
+    const nextIndex=(index+heroSlides.length)%heroSlides.length;if(nextIndex===heroIndex)return;
+    heroIndex=nextIndex;const slide=heroSlides[heroIndex];const incoming=activeHeroImage===heroImageA?heroImageB:heroImageA;const outgoing=activeHeroImage;
+    incoming.src=slide.image;incoming.alt=`Barkwood Design ${slide.meta}`;incoming.classList.remove('active');heroContent.classList.add('hero-copy-fading');
+    setTimeout(()=>{outgoing.classList.remove('active');incoming.classList.add('active');activeHeroImage=incoming;heroEyebrow.textContent=slide.eyebrow;heroTitle.innerHTML=slide.title;heroSub.textContent=slide.sub;heroNote.textContent=slide.note;heroMeta.innerHTML=`${String(heroIndex+1).padStart(2,'0')} / <b>${slide.meta}</b>`;heroSlideCaption.textContent=`${String(heroIndex+1).padStart(2,'0')} · ${slide.meta}`;detectHeroTone();renderHeroIndicators();preloadHero(heroIndex+1);requestAnimationFrame(()=>heroContent.classList.remove('hero-copy-fading'))},430);
+    if(manual)restartHeroTimer();
+  }
+  renderHeroIndicators();
+  heroImageA.addEventListener('load',detectHeroTone);heroImageB.addEventListener('load',detectHeroTone);detectHeroTone();
+  hero.addEventListener('mouseenter',()=>heroPaused=true);hero.addEventListener('mouseleave',()=>heroPaused=false);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)heroPaused=true;else heroPaused=hero.matches(':hover')});
+  if(!prefersReducedMotion)restartHeroTimer();
+
+  function cardMarkup(p){return `<a class="project-card reveal" href="#category/${p.category}"><div class="project-media"><img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async"><div class="project-overlay"></div></div><div class="project-info"><div><span class="project-kicker">${p.categoryLabel}</span><h3>${p.title}</h3><p>${p.location} · ${p.year}</p></div><span class="project-arrow" aria-hidden="true">↗</span></div></a>`}
+  function renderProjects(filter='all'){
+    const items=filter==='all'?projects:projects.filter(p=>p.category===filter);
+    projectGrid.innerHTML=items.length?items.map(cardMarkup).join(''):`<div class="project-card card-empty"><div><span class="eyebrow">Selected Work</span><strong>More work from this sector is being prepared.</strong><span>For relevant experience, current projects or a tailored portfolio, contact the studio directly.</span><a class="text-link" href="#contact" style="margin-top:22px">Discuss your project <span>↗</span></a></div></div>`;
+    observeReveal();
+  }
+  function syncProjectFilters(){
+    const available=new Set(projects.map(p=>p.category));
+    document.querySelectorAll('.filter-btn').forEach(btn=>{if(btn.dataset.filter!=='all')btn.hidden=!available.has(btn.dataset.filter)});
+    const railLabel=document.querySelector('.rail-label i');if(railLabel)railLabel.textContent=available.size>1?'Drag or scroll →':'Published work';
+  }
+  function renderArchive(){
+    archiveList.innerHTML=categories.map((c,i)=>{const count=projects.filter(p=>p.category===c[0]).length;const note=count?`${count} published project${count===1?'':'s'}`:'Sector overview';return `<a class="archive-row" href="#category/${c[0]}"><span class="archive-no">${String(i+1).padStart(2,'0')}</span><span class="archive-name">${c[1]}</span><span class="archive-note">${note}</span><span class="archive-arrow" aria-hidden="true">↗</span></a>`}).join('');
+  }
+  function renderCategory(slug){
+    const meta=categoryMap[slug];if(!meta)return false;
+    categoryEyebrow.textContent='Project Category';categoryTitle.textContent=meta.name;categorySummary.textContent=meta.desc;
+    const items=projects.filter(p=>p.category===slug);
+    if(items.length){categoryCards.innerHTML=items.map(p=>`<article class="cat-project"><img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async"><div class="project-overlay"></div><div class="cat-info"><small>${p.categoryLabel}</small><h3>${p.title}</h3><p>${p.location} · ${p.year}</p></div></article>`).join('');if(items.length===1&&items[0].gallery){categoryCards.innerHTML+=items[0].gallery.map((g,i)=>`<article class="cat-project"><img src="${g}" alt="${items[0].title} view ${i+2}" loading="lazy" decoding="async"><div class="project-overlay"></div><div class="cat-info"><small>${items[0].categoryLabel}</small><h3>${items[0].title} · View ${i+2}</h3><p>Project gallery</p></div></article>`).join('')}}else{categoryCards.innerHTML=`<div class="card-empty" style="grid-column:1/-1"><div><span class="eyebrow">${meta.name}</span><strong>Selected work is being prepared for publication.</strong><span>The studio remains available to discuss relevant experience, current work and project-specific capabilities in this sector.</span><a class="text-link" href="#contact" style="margin-top:22px">Contact the studio <span>↗</span></a></div></div>`}
+    return true;
+  }
+  function postMarkup(p,type){const isNews=type==='news';return `<article class="post-card reveal"><div class="post-image"><img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async"></div><div class="post-body"><span class="post-kicker">${p.kicker} · ${p.date}</span><h3>${p.title}</h3><p>${p.text}</p><a class="text-link" href="#${isNews?'news':'blog'}">${isNews?'View news':'View blog'} <span>↗</span></a></div></article>`}
+  function renderPosts(){document.getElementById('homeBlogGrid').innerHTML=blogPosts.map(p=>postMarkup(p,'blog')).join('');document.getElementById('homeNewsGrid').innerHTML=newsPosts.map(p=>postMarkup(p,'news')).join('');document.getElementById('blogGrid').innerHTML=blogPosts.map(p=>postMarkup(p,'blog')).join('');document.getElementById('newsGrid').innerHTML=newsPosts.map(p=>postMarkup(p,'news')).join('');observeReveal()}
+
+  const observer='IntersectionObserver' in window?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.10,rootMargin:'0px 0px -40px 0px'}):null;
+  function observeReveal(){document.querySelectorAll('.reveal:not(.in)').forEach(el=>{if(observer)observer.observe(el);else el.classList.add('in')})}
+
+  renderProjects();syncProjectFilters();renderArchive();renderPosts();observeReveal();
+  document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderProjects(btn.dataset.filter)}));
+
+  function showView(view){
+    homeView.style.display='block';categoryView.classList.remove('active');buildView.classList.remove('active');blogView.classList.remove('active');newsView.classList.remove('active');
+    if(view==='category'){homeView.style.display='none';categoryView.classList.add('active')}else if(view==='build'){homeView.style.display='none';buildView.classList.add('active')}else if(view==='blog'){homeView.style.display='none';blogView.classList.add('active')}else if(view==='news'){homeView.style.display='none';newsView.classList.add('active')}
+  }
+  function updateMeta(title,description){
+    document.title=title;
+    const d=document.querySelector('meta[name="description"]');if(d)d.content=description;
+    const ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.content=title;
+    const ogDesc=document.querySelector('meta[property="og:description"]');if(ogDesc)ogDesc.content=description;
+    const twTitle=document.querySelector('meta[name="twitter:title"]');if(twTitle)twTitle.content=title;
+    const twDesc=document.querySelector('meta[name="twitter:description"]');if(twDesc)twDesc.content=description;
+  }
+  function scrollToTop(){window.scrollTo({top:0,behavior:prefersReducedMotion?'auto':'smooth'})}
+  function route(){
+    const h=location.hash.slice(1);
+    setMobileMenu(false);
+    if(h.startsWith('category/')){const slug=h.split('/')[1];if(!renderCategory(slug)){location.hash='projects';return}showView('category');const meta=categoryMap[slug];updateMeta(`${meta.name} Projects | Barkwood Design`,meta.desc);scrollToTop();return}
+    if(h==='build-services'){showView('build');updateMeta('Build Services | Barkwood Design',EDIT_HERE.BUILD_SERVICES.heroText);scrollToTop();return}
+    if(h==='blog'){showView('blog');updateMeta('Blog | Barkwood Design','Research notes, design findings, material observations and practical ideas from Barkwood Design.');scrollToTop();return}
+    if(h==='news'){showView('news');updateMeta('News | Barkwood Design','Studio news, project launches, collaborations, teaching activities and practice updates from Barkwood Design.');scrollToTop();return}
+    showView('home');updateMeta(EDIT_HERE.SITE.browserTitle,EDIT_HERE.SITE.description);
+    if(h&&document.getElementById(h))setTimeout(()=>document.getElementById(h).scrollIntoView({behavior:prefersReducedMotion?'auto':'smooth',block:'start'}),0);
+  }
+  window.addEventListener('hashchange',route);route();handleScroll();
+
+  function makeDragRail(el){if(!el)return;let down=false,startX=0,startLeft=0;el.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;startLeft=el.scrollLeft;el.classList.add('dragging');el.setPointerCapture?.(e.pointerId)});el.addEventListener('pointermove',e=>{if(down)el.scrollLeft=startLeft-(e.clientX-startX)});const end=()=>{down=false;el.classList.remove('dragging')};el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end);el.addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){el.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false})}
+  makeDragRail(document.getElementById('projectFilterRail'));
+
+  backToTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:prefersReducedMotion?'auto':'smooth'}));
+
+  function getFocusable(container){return [...container.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(el=>!el.hidden&&el.offsetParent!==null)}
+  function openBooking(){lastFocusedBeforeModal=document.activeElement;bookingModal.classList.add('open');bookingModal.setAttribute('aria-hidden','false');body.classList.add('modal-open');bookingCard.focus();setTimeout(()=>document.getElementById('name').focus(),60)}
+  function closeBooking(){if(!bookingModal.classList.contains('open'))return;bookingModal.classList.remove('open');bookingModal.setAttribute('aria-hidden','true');body.classList.remove('modal-open');lastFocusedBeforeModal?.focus?.()}
+  bookingFloat.addEventListener('click',openBooking);bookingClose.addEventListener('click',closeBooking);bookingModal.addEventListener('click',e=>{if(e.target===bookingModal)closeBooking()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeBooking();setMobileMenu(false)}if(e.key==='Tab'&&bookingModal.classList.contains('open')){const focusable=getFocusable(bookingCard);if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+
+  const dateInput=document.getElementById('date');if(dateInput){const now=new Date();const localDate=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);dateInput.min=localDate}
+  bookingForm.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const fd=new FormData(bookingForm);
+    const plain=`Barkwood Design session request\n\nName: ${fd.get('name')}\nEmail: ${fd.get('email')}\nPhone: ${fd.get('phone')}\nSession: ${fd.get('session')}\nPreferred date: ${fd.get('date')}\nPreferred time: ${fd.get('time')}\n\nProject details:\n${fd.get('message')||''}`;
+    try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(plain)}catch(_){}
+    const subject=encodeURIComponent('Barkwood Design session request from '+(fd.get('name')||''));
+    const bodyText=encodeURIComponent(plain);
+    bookingStatus.textContent='Your request is prepared. Your email app will open; the request is also copied when browser permissions allow.';
+    window.location.href=`mailto:info@barkwooddesign.com?subject=${subject}&body=${bodyText}`;
+  });
+
+})();
+</script>
 </body>
-
 </html>
